@@ -1,73 +1,86 @@
 const BenefitsSection = () => {
   const benefits = [
     {
-      icon: "📊",
       stat: "98%",
-      title: "Open Rates",
-      description: "WhatsApp messages have the highest open rates compared to email (20%) and SMS (98%)"
+      label: "Open Rate",
+      description: "Industry-leading message delivery and engagement rates",
+      icon: "📱",
+      comparison: "vs 20% for email"
     },
     {
+      stat: "60%",
+      label: "Click Rate",
+      description: "Superior click-through rates drive real business results",
       icon: "🎯",
-      stat: "45-60%",
-      title: "Click-Through Rate",
-      description: "Achieve industry-leading CTR that's 5x higher than traditional email marketing"
+      comparison: "vs 3% for email"
     },
     {
+      stat: "45x",
+      label: "Faster Response",
+      description: "Instant communication leads to quicker conversions",
       icon: "⚡",
-      stat: "3x",
-      title: "Faster Response",
-      description: "Customers respond 3x faster on WhatsApp than any other communication channel"
+      comparison: "than traditional methods"
     },
     {
-      icon: "💰",
-      stat: "4x",
-      title: "Higher ROI",
-      description: "Generate 4x more revenue per message compared to traditional marketing channels"
+      stat: "300%",
+      label: "More Engagement",
+      description: "Higher customer interaction and satisfaction rates",
+      icon: "💬",
+      comparison: "vs social media"
     }
   ];
 
   return (
-    <section className="py-20 section-gradient">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why WhatsApp Marketing 
-            <span className="text-whatsapp"> Outperforms Everything</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            WhatsApp isn't just messaging—it's the most powerful direct marketing channel 
-            that delivers real results for businesses worldwide.
-          </p>
-        </div>
+    <section className="py-24 lg:py-32 premium-gradient">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-20 fade-in-up">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-whatsapp/10 rounded-full text-sm font-medium text-whatsapp mb-6">
+              <span className="w-2 h-2 bg-whatsapp rounded-full animate-pulse"></span>
+              Why WhatsApp Marketing Works
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl premium-heading mb-6 max-w-4xl mx-auto leading-tight">
+              Outperform Every Other 
+              <span className="text-whatsapp block">Marketing Channel</span>
+            </h2>
+            <p className="text-xl premium-text max-w-3xl mx-auto leading-relaxed">
+              WhatsApp isn't just another messaging platform—it's the most effective way to reach and convert your customers with unprecedented engagement rates.
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <div 
-              key={index}
-              className="bg-white rounded-2xl p-8 text-center whatsapp-shadow hover:scale-105 smooth-transition"
-            >
-              <div className="text-5xl mb-4">{benefit.icon}</div>
-              <div className="text-4xl font-bold text-whatsapp mb-2">{benefit.stat}</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
-            </div>
-          ))}
-        </div>
+          {/* Benefits Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div 
+                key={index}
+                className="premium-card p-8 text-center group hover:scale-[1.02] stagger-animation"
+                style={{"--stagger": index + 1} as React.CSSProperties}
+              >
+                <div className="text-4xl mb-4 group-hover:scale-110 premium-transition">{benefit.icon}</div>
+                <div className="text-4xl lg:text-5xl font-bold text-whatsapp mb-2">{benefit.stat}</div>
+                <div className="text-lg font-semibold premium-heading mb-3">{benefit.label}</div>
+                <p className="text-sm premium-text mb-4 leading-relaxed">{benefit.description}</p>
+                <div className="text-xs text-neutral-500 font-medium">{benefit.comparison}</div>
+              </div>
+            ))}
+          </div>
 
-        {/* Additional Stats Row */}
-        <div className="mt-16 bg-white rounded-3xl p-8 whatsapp-shadow max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-whatsapp mb-2">2.8B+</div>
-              <div className="text-gray-600">WhatsApp Users Worldwide</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-whatsapp mb-2">90%</div>
-              <div className="text-gray-600">Messages Read Within 3 Minutes</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-whatsapp mb-2">5x</div>
-              <div className="text-gray-600">Higher Engagement Than Email</div>
+          {/* Additional Stats */}
+          <div className="mt-20 premium-card p-12 text-center">
+            <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
+              <div>
+                <div className="text-3xl font-bold text-whatsapp mb-2">2.7B+</div>
+                <div className="text-sm premium-text">Global WhatsApp Users</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-whatsapp mb-2">5.5B</div>
+                <div className="text-sm premium-text">Messages Sent Daily</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-whatsapp mb-2">90%</div>
+                <div className="text-sm premium-text">Messages Read Within 3 Minutes</div>
+              </div>
             </div>
           </div>
         </div>
