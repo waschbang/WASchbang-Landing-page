@@ -2,14 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* WhatsApp Marketing Landing Page Design System */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
+    
+    /* WhatsApp Brand Colors */
+    --whatsapp-green: 142 70% 49%;
+    --whatsapp-green-light: 142 45% 85%;
+    --whatsapp-green-dark: 142 85% 35%;
+    
+    /* Brand Colors */
+    --brand-primary: 142 70% 49%;
+    --brand-secondary: 220 70% 50%;
+    --brand-accent: 45 93% 47%;
+    
+    /* Success & Trust Colors */
+    --success: 142 76% 36%;
+    --success-light: 142 45% 85%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(142 70% 49%), hsl(220 70% 50%));
+    --gradient-cta: linear-gradient(135deg, hsl(142 85% 35%), hsl(142 70% 49%));
+    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%), hsl(142 20% 97%));
+    
+    /* Animations & Effects */
+    --shadow-whatsapp: 0 4px 20px hsl(142 70% 49% / 0.2);
+    --shadow-cta: 0 8px 32px hsl(142 85% 35% / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -17,7 +39,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 142 70% 49%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -34,24 +56,17 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 142 70% 49%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -65,8 +80,8 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 142 70% 49%;
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -100,6 +115,32 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .cta-gradient {
+    background: var(--gradient-cta);
+  }
+  
+  .section-gradient {
+    background: var(--gradient-section);
+  }
+  
+  .whatsapp-shadow {
+    box-shadow: var(--shadow-whatsapp);
+  }
+  
+  .cta-shadow {
+    box-shadow: var(--shadow-cta);
+  }
+  
+  .smooth-transition {
+    transition: var(--transition-smooth);
   }
 }

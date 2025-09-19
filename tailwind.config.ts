@@ -19,6 +19,23 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
+        /* WhatsApp Brand Colors */
+        whatsapp: {
+          DEFAULT: "hsl(var(--whatsapp-green))",
+          light: "hsl(var(--whatsapp-green-light))",
+          dark: "hsl(var(--whatsapp-green-dark))",
+        },
+        brand: {
+          primary: "hsl(var(--brand-primary))",
+          secondary: "hsl(var(--brand-secondary))",
+          accent: "hsl(var(--brand-accent))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          light: "hsl(var(--success-light))",
+        },
+        
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
