@@ -25,18 +25,18 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-neutral-900 text-white py-20">
+    <footer className="bg-neutral-900 text-white py-16">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           {/* Top Section */}
-          <div className="grid lg:grid-cols-6 gap-12 mb-16">
+          <div className="flex flex-wrap gap-12 mb-12">
             {/* Company Info */}
-            <div className="lg:col-span-2">
+            <div className="w-full lg:w-1/3 min-w-[260px]">
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-8 h-8 bg-whatsapp rounded-lg flex items-center justify-center">
-                  <span className="font-bold text-sm">A</span>
+                  <span className="font-bold text-sm">W</span>
                 </div>
-                <span className="text-xl font-bold">AiSensy</span>
+                <span className="text-xl font-bold">WASchbang</span>
               </div>
               <p className="text-neutral-400 mb-6 leading-relaxed">
                 Official WhatsApp Business API provider helping businesses achieve higher engagement and conversion rates through intelligent messaging solutions.
@@ -52,42 +52,31 @@ const Footer = () => {
             </div>
 
             {/* Footer Links */}
-            {footerSections.map((section, index) => (
-              <div key={index}>
-                <h3 className="font-semibold text-white mb-4">{section.title}</h3>
-                <ul className="space-y-3">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <a 
-                        href="#" 
-                        className="text-neutral-400 hover:text-white premium-transition text-sm"
-                      >
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="border-t border-neutral-800 pt-12 mb-12">
-            <div className="text-center mb-8">
-              <h3 className="text-lg font-semibold mb-4">Trusted by 500+ Businesses Globally</h3>
-              <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-                <div className="text-sm bg-neutral-800 px-4 py-2 rounded">Official WhatsApp Partner</div>
-                <div className="text-sm bg-neutral-800 px-4 py-2 rounded">ISO 27001 Certified</div>
-                <div className="text-sm bg-neutral-800 px-4 py-2 rounded">GDPR Compliant</div>
-                <div className="text-sm bg-neutral-800 px-4 py-2 rounded">99.9% Uptime</div>
-              </div>
-            </div>
+            {footerSections
+              .filter((section) => section.title !== "Product" && section.title !== "Resources")
+              .map((section, index) => (
+                <div key={index} className="w-1/2 sm:w-1/3 lg:w-auto min-w-[180px]">
+                  <h3 className="font-semibold text-white mb-4">{section.title}</h3>
+                  <ul className="space-y-3">
+                    {section.links.map((link, linkIndex) => (
+                      <li key={linkIndex}>
+                        <a 
+                          href="#" 
+                          className="text-neutral-400 hover:text-white premium-transition text-sm"
+                        >
+                          {link}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
           </div>
 
           {/* Bottom Section */}
           <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center">
             <div className="text-neutral-400 text-sm mb-4 md:mb-0">
-              © 2024 AiSensy. All rights reserved.
+              &copy; 2025 WASchbang. All rights reserved.
             </div>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-neutral-400 hover:text-white premium-transition">Privacy Policy</a>

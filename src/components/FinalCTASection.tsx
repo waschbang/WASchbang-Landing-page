@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const FinalCTASection = () => {
   return (
-    <section className="py-24 lg:py-32 relative overflow-hidden">
+    <section className="py-16 lg:py-24 relative overflow-hidden">
       {/* Premium Background */}
       <div className="absolute inset-0 premium-gradient"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-whatsapp/5 to-brand-accent/5"></div>
@@ -17,13 +17,13 @@ const FinalCTASection = () => {
       
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="space-y-8 fade-in-up">
+          <div className="space-y-6 fade-in-up">
             <div className="inline-flex items-center gap-2 px-6 py-3 bg-white premium-shadow rounded-full text-sm font-medium text-whatsapp">
               <span className="w-2 h-2 bg-whatsapp rounded-full animate-pulse"></span>
               Ready to Transform Your Business?
             </div>
             
-            <h2 className="text-5xl md:text-6xl lg:text-7xl premium-heading leading-[1.1] tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl premium-heading leading-[1.1] tracking-tight">
               Let's Build Your 
               <span className="text-whatsapp block">WhatsApp Growth Engine</span>
             </h2>
@@ -35,7 +35,7 @@ const FinalCTASection = () => {
           </div>
           
           {/* Main CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center my-12 fade-in-scale">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center my-10 fade-in-scale">
             <Button 
               size="lg"
               className="cta-gradient text-white premium-button h-16 px-12 rounded-2xl text-xl font-semibold cta-shadow"
@@ -52,7 +52,7 @@ const FinalCTASection = () => {
           </div>
           
           {/* Value Props */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
               { icon: "⚡", title: "Setup in 24 Hours", desc: "Get your WhatsApp marketing running tomorrow, not next month" },
               { icon: "💰", title: "No Hidden Fees", desc: "Transparent pricing with no setup costs or surprise charges" },
@@ -71,7 +71,7 @@ const FinalCTASection = () => {
           </div>
           
           {/* Social Proof */}
-          <div className="flex flex-wrap justify-center items-center gap-12 mb-12 premium-text">
+          <div className="flex flex-wrap justify-center items-center gap-12 mb-10 premium-text">
             <div className="flex items-center gap-3">
               <span className="text-yellow-500 text-2xl">⭐⭐⭐⭐⭐</span>
               <span className="font-medium">500+ Happy Clients</span>

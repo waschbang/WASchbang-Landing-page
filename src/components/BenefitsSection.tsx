@@ -31,10 +31,10 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 premium-gradient">
+    <section className="py-16 lg:py-20 premium-gradient">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20 fade-in-up">
+          <div className="text-center mb-12 fade-in-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-whatsapp/10 rounded-full text-sm font-medium text-whatsapp mb-6">
               <span className="w-2 h-2 bg-whatsapp rounded-full animate-pulse"></span>
               Why Choose WhatsApp for Business?
@@ -49,7 +49,7 @@ const BenefitsSection = () => {
           </div>
 
           {/* Main Stats */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
             <div className="text-center p-6 lg:p-8 bg-white rounded-3xl premium-shadow border border-neutral-100 hover:shadow-xl premium-transition group">
               <div className="text-3xl lg:text-4xl xl:text-5xl font-bold text-whatsapp mb-2 group-hover:scale-110 premium-transition">98%</div>
               <div className="text-neutral-700 font-medium mb-1">Open Rates</div>

@@ -5,7 +5,7 @@ const SolutionsSection = () => {
     {
       title: "Run AI powered Ads that Click to WhatsApp",
       description: "Run Ads on Facebook & Instagram that land on WhatsApp. 5X Your lead generations & 2-3X Conversions Instantly!",
-      details: "Run Ads from AiSensy, get quality leads with AI & conversions API, smartly segregate your leads and build Chatbot Flows to automate everything!",
+      details: "Run Ads from WASchbang, get quality leads with AI & conversions API, smartly segregate your leads and build Chatbot Flows to automate everything!",
       icon: "🎯",
       color: "from-blue-50 to-blue-100",
       border: "border-blue-200"
@@ -53,11 +53,11 @@ const SolutionsSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-neutral-50">
+    <section className="py-16 lg:py-20 bg-neutral-50">
       <div className="container mx-auto px-4 lg:px-12">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 lg:mb-20">
+          <div className="text-center mb-12 lg:mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-whatsapp/10 rounded-full text-sm font-medium text-whatsapp mb-6">
               <span className="w-2 h-2 bg-whatsapp rounded-full animate-pulse"></span>
               Complete WhatsApp Solutions
@@ -72,7 +72,7 @@ const SolutionsSection = () => {
           </div>
 
           {/* Solutions Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
             {solutions.map((solution, index) => (
               <div key={index} className={`p-6 lg:p-8 bg-gradient-to-br ${solution.color} rounded-3xl ${solution.border} border hover:shadow-xl premium-transition group`}>
                 <div className="w-14 h-14 lg:w-16 lg:h-16 bg-white/80 rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 premium-transition">
@@ -98,7 +98,7 @@ const SolutionsSection = () => {
 
           {/* CTA Section */}
           <div className="text-center">
-            <div className="bg-white rounded-3xl p-8 lg:p-12 premium-shadow border border-neutral-100 max-w-4xl mx-auto">
+            <div className="bg-white rounded-3xl p-8 lg:p-10 premium-shadow border border-neutral-100 max-w-4xl mx-auto">
               <h3 className="text-2xl lg:text-3xl font-bold text-neutral-900 mb-4">
                 Ready to Transform Your Customer Communication?
               </h3>

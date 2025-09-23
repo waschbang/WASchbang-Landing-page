@@ -26,11 +26,11 @@ const WhyWhatsAppSection = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-b from-neutral-50 to-white">
+    <section className="py-16 lg:py-20 bg-gradient-to-b from-neutral-50 to-white">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-20">
+          <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-whatsapp/10 rounded-full text-sm font-medium text-whatsapp mb-6">
               Latest Features Launch
             </div>
@@ -38,7 +38,7 @@ const WhyWhatsAppSection = () => {
               Get Started with Forms, Payments & CTWA
             </h2>
             <p className="text-xl premium-text mb-6 max-w-3xl mx-auto">
-              AiSensy launches latest WhatsApp and AI Features at blazing fast speed
+              WASchbang launches latest WhatsApp and AI Features at blazing fast speed
             </p>
             
             <div className="bg-white rounded-2xl p-8 premium-shadow-lg border border-neutral-100 max-w-2xl mx-auto">
@@ -67,7 +67,7 @@ const WhyWhatsAppSection = () => {
           </div>
 
           {/* Why WhatsApp */}
-          <div className="mb-20">
+          <div className="mb-12">
             <div className="text-center mb-16">
               <h3 className="text-3xl md:text-4xl premium-heading mb-6">
                 Why WhatsApp?
@@ -92,21 +92,7 @@ const WhyWhatsAppSection = () => {
             </div>
           </div>
 
-          {/* Stats */}
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="p-6">
-              <div className="text-4xl font-bold text-whatsapp mb-2">2B+</div>
-              <div className="text-neutral-600">Active Users Worldwide</div>
-            </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-whatsapp mb-2">98%</div>
-              <div className="text-neutral-600">Message Open Rate</div>
-            </div>
-            <div className="p-6">
-              <div className="text-4xl font-bold text-whatsapp mb-2">60%</div>
-              <div className="text-neutral-600">Click-Through Rate</div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>

@@ -50,9 +50,9 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-20 section-gradient">
+    <section className="py-16 section-gradient">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Frequently Asked 
             <span className="text-whatsapp"> Questions</span>
@@ -83,7 +83,7 @@ const FAQSection = () => {
         </div>
 
         {/* Still Have Questions CTA */}
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center">
           <div className="bg-white rounded-3xl p-8 whatsapp-shadow max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Still Have Questions?
