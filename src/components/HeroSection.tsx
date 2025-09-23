@@ -3,7 +3,7 @@ import heroImage from "@/assets/hero-whatsapp-marketing.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden premium-gradient">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden premium-gradient pt-16">
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12 py-32">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-7xl mx-auto">
@@ -79,13 +79,17 @@ const HeroSection = () => {
             
             {/* Floating Elements */}
             <div className="absolute -top-6 -right-6 premium-card p-6 stagger-animation" style={{"--stagger": "3"} as React.CSSProperties}>
-              <div className="text-3xl mb-2">💬</div>
+              <div className="w-8 h-8 bg-whatsapp/10 rounded-lg flex items-center justify-center mb-2">
+                <span className="text-whatsapp font-bold text-lg">%</span>
+              </div>
               <div className="text-sm font-semibold text-neutral-700">98% Open Rate</div>
               <div className="text-xs text-neutral-500 mt-1">Industry Leading</div>
             </div>
             
             <div className="absolute -bottom-6 -left-6 bg-whatsapp premium-card p-6 text-white stagger-animation" style={{"--stagger": "4"} as React.CSSProperties}>
-              <div className="text-3xl mb-2">📈</div>
+              <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mb-2">
+                <span className="text-white font-bold text-lg">↗</span>
+              </div>
               <div className="text-sm font-semibold">60% CTR</div>
               <div className="text-xs text-whatsapp-light mt-1">Conversion Rate</div>
             </div>
@@ -103,7 +107,9 @@ const HeroSection = () => {
           className="bg-whatsapp hover:bg-whatsapp-dark text-white rounded-2xl w-16 h-16 premium-shadow-xl premium-button group"
           size="icon"
         >
-          <span className="text-2xl group-hover:scale-110 premium-transition">💬</span>
+          <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center group-hover:scale-110 premium-transition">
+            <span className="text-white font-bold">W</span>
+          </div>
         </Button>
       </div>
     </section>
