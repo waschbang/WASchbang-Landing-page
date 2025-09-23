@@ -14,8 +14,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-neutral-100">
-      <div className="container mx-auto px-6 lg:px-12">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-100">
+      <div className="container mx-auto px-4 lg:px-12">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
@@ -43,9 +43,21 @@ const Navbar = () => {
             ))}
           </div>
 
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden">
+            <Button variant="ghost" size="sm">
+              <span className="sr-only">Menu</span>
+              <div className="w-6 h-6 flex flex-col justify-center gap-1">
+                <div className="w-6 h-0.5 bg-neutral-600"></div>
+                <div className="w-6 h-0.5 bg-neutral-600"></div>
+                <div className="w-6 h-0.5 bg-neutral-600"></div>
+              </div>
+            </Button>
+          </div>
+
           {/* Right Side */}
-          <div className="flex items-center gap-4">
-            <div className="hidden md:flex items-center gap-1 text-sm text-neutral-600">
+          <div className="hidden lg:flex items-center gap-4">
+            <div className="flex items-center gap-1 text-sm text-neutral-600">
               <span className="w-4 h-4 rounded-full bg-neutral-200 flex items-center justify-center text-xs">🌐</span>
               <span>Eng</span>
               <ChevronDown className="w-3 h-3" />

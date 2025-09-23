@@ -15,32 +15,36 @@ const HeroSection = () => {
                 Official WhatsApp Business Partner
               </div>
               
-              <h1 className="text-5xl md:text-6xl lg:text-7xl premium-heading mb-6 leading-[1.1] tracking-tight">
-                Unlock High-Converting
-                <span className="block text-whatsapp">WhatsApp Marketing</span>
-                <span className="text-neutral-600 text-4xl md:text-5xl lg:text-6xl block mt-2">for Your Business</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl premium-heading mb-6 leading-[1.1] tracking-tight">
+                <span className="block text-whatsapp font-bold">5X Your Revenue</span>
+                <span className="block text-neutral-900">with the Power of</span>
+                <span className="block text-neutral-900 font-bold">WhatsApp</span>
               </h1>
             </div>
             
-            <p className="text-xl md:text-2xl premium-text max-w-2xl leading-relaxed">
-              Transform your customer engagement with official WhatsApp Business API. 
-              Achieve 98% open rates and 45-60% click-through rates with our proven marketing solutions.
+            <p className="text-lg md:text-xl lg:text-2xl premium-text max-w-3xl leading-relaxed">
+              Broadcast, Automate, Engage, Sell - Do Everything with the Smartest WhatsApp Engagement Platform
             </p>
+            
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 border border-amber-200 rounded-full text-sm font-medium text-amber-700 mb-4">
+              <span className="animate-pulse">⚡</span>
+              Powered by Official WhatsApp APIs
+            </div>
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="cta-gradient text-white premium-button h-14 px-8 rounded-2xl cta-shadow text-lg font-medium"
+                className="bg-whatsapp hover:bg-whatsapp-dark text-white premium-button h-14 px-8 rounded-2xl premium-shadow text-lg font-medium"
               >
-                Book Free Consultation
+                Try AiSensy for FREE →
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="premium-button h-14 px-8 rounded-2xl border-2 border-neutral-200 text-neutral-700 hover:border-whatsapp hover:text-whatsapp bg-white premium-shadow text-lg font-medium"
+                className="premium-button h-14 px-8 rounded-2xl border-2 border-neutral-300 text-neutral-700 hover:border-whatsapp hover:text-whatsapp bg-white premium-shadow text-lg font-medium"
               >
-                Request Demo
+                Join Live Demo →
               </Button>
             </div>
             

@@ -34,53 +34,68 @@ const BenefitsSection = () => {
     <section className="py-24 lg:py-32 premium-gradient">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
-          {/* Section Header */}
           <div className="text-center mb-20 fade-in-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-whatsapp/10 rounded-full text-sm font-medium text-whatsapp mb-6">
               <span className="w-2 h-2 bg-whatsapp rounded-full animate-pulse"></span>
-              Why WhatsApp Marketing Works
+              Why Choose WhatsApp for Business?
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl premium-heading mb-6 max-w-4xl mx-auto leading-tight">
-              Outperform Every Other 
-              <span className="text-whatsapp block">Marketing Channel</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl premium-heading mb-6 max-w-4xl mx-auto leading-tight">
+              Experience Unmatched 
+              <span className="text-whatsapp block">Engagement Rates</span>
             </h2>
-            <p className="text-xl premium-text max-w-3xl mx-auto leading-relaxed">
-              WhatsApp isn't just another messaging platform—it's the most effective way to reach and convert your customers with unprecedented engagement rates.
+            <p className="text-lg md:text-xl premium-text max-w-3xl mx-auto leading-relaxed">
+              The world's most popular messaging platform with performance that outshines every other channel
             </p>
           </div>
 
-          {/* Benefits Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div 
-                key={index}
-                className="premium-card p-8 text-center group hover:scale-[1.02] stagger-animation"
-                style={{"--stagger": index + 1} as React.CSSProperties}
-              >
-                <div className="text-4xl mb-4 group-hover:scale-110 premium-transition">{benefit.icon}</div>
-                <div className="text-4xl lg:text-5xl font-bold text-whatsapp mb-2">{benefit.stat}</div>
-                <div className="text-lg font-semibold premium-heading mb-3">{benefit.label}</div>
-                <p className="text-sm premium-text mb-4 leading-relaxed">{benefit.description}</p>
-                <div className="text-xs text-neutral-500 font-medium">{benefit.comparison}</div>
-              </div>
-            ))}
+          {/* Main Stats */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
+            <div className="text-center p-6 lg:p-8 bg-white rounded-3xl premium-shadow border border-neutral-100 hover:shadow-xl premium-transition group">
+              <div className="text-3xl lg:text-4xl xl:text-5xl font-bold text-whatsapp mb-2 group-hover:scale-110 premium-transition">98%</div>
+              <div className="text-neutral-700 font-medium mb-1">Open Rates</div>
+              <div className="text-sm text-neutral-500">vs 20% for email</div>
+            </div>
+            <div className="text-center p-6 lg:p-8 bg-white rounded-3xl premium-shadow border border-neutral-100 hover:shadow-xl premium-transition group">
+              <div className="text-3xl lg:text-4xl xl:text-5xl font-bold text-whatsapp mb-2 group-hover:scale-110 premium-transition">45-60%</div>
+              <div className="text-neutral-700 font-medium mb-1">Click Rates</div>
+              <div className="text-sm text-neutral-500">Industry leading</div>
+            </div>
+            <div className="text-center p-6 lg:p-8 bg-white rounded-3xl premium-shadow border border-neutral-100 hover:shadow-xl premium-transition group">
+              <div className="text-3xl lg:text-4xl xl:text-5xl font-bold text-whatsapp mb-2 group-hover:scale-110 premium-transition">2.6B+</div>
+              <div className="text-neutral-700 font-medium mb-1">Active Users</div>
+              <div className="text-sm text-neutral-500">Worldwide reach</div>
+            </div>
+            <div className="text-center p-6 lg:p-8 bg-white rounded-3xl premium-shadow border border-neutral-100 hover:shadow-xl premium-transition group">
+              <div className="text-3xl lg:text-4xl xl:text-5xl font-bold text-whatsapp mb-2 group-hover:scale-110 premium-transition">7%</div>
+              <div className="text-neutral-700 font-medium mb-1">Engagement Rate</div>
+              <div className="text-sm text-neutral-500">vs 1.9% for email</div>
+            </div>
           </div>
 
-          {/* Additional Stats */}
-          <div className="mt-20 premium-card p-12 text-center">
-            <div className="grid md:grid-cols-3 gap-12 max-w-4xl mx-auto">
-              <div>
-                <div className="text-3xl font-bold text-whatsapp mb-2">2.7B+</div>
-                <div className="text-sm premium-text">Global WhatsApp Users</div>
+          {/* Feature Cards */}
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="text-center p-6 lg:p-8 bg-gradient-to-br from-whatsapp/5 to-whatsapp/10 rounded-3xl border border-whatsapp/20 hover:shadow-lg premium-transition">
+              <div className="w-14 h-14 lg:w-16 lg:h-16 bg-whatsapp/10 rounded-2xl flex items-center justify-center mx-auto mb-4 lg:mb-6">
+                <span className="text-xl lg:text-2xl">📢</span>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-whatsapp mb-2">5.5B</div>
-                <div className="text-sm premium-text">Messages Sent Daily</div>
+              <h3 className="text-lg lg:text-xl font-semibold text-neutral-900 mb-3">8+ Powerful Messaging Categories</h3>
+              <p className="text-neutral-600 leading-relaxed text-sm lg:text-base">Send Promotions, Offers, Coupon codes, Carousels and More - Risk-Free!</p>
+            </div>
+            
+            <div className="text-center p-6 lg:p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl border border-blue-200 hover:shadow-lg premium-transition">
+              <div className="w-14 h-14 lg:w-16 lg:h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 lg:mb-6">
+                <span className="text-xl lg:text-2xl">💬</span>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-whatsapp mb-2">90%</div>
-                <div className="text-sm premium-text">Messages Read Within 3 Minutes</div>
+              <h3 className="text-lg lg:text-xl font-semibold text-neutral-900 mb-3">Add CTAs. Drive 3x Conversions</h3>
+              <p className="text-neutral-600 leading-relaxed text-sm lg:text-base">Turn conversations into conversions with eye-catching CTA and Quick Reply buttons</p>
+            </div>
+            
+            <div className="text-center p-6 lg:p-8 bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl border border-purple-200 hover:shadow-lg premium-transition">
+              <div className="w-14 h-14 lg:w-16 lg:h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 lg:mb-6">
+                <span className="text-xl lg:text-2xl">⏰</span>
               </div>
+              <h3 className="text-lg lg:text-xl font-semibold text-neutral-900 mb-3">Schedule your WhatsApp messages</h3>
+              <p className="text-neutral-600 leading-relaxed text-sm lg:text-base">Streamline your work, Schedule Broadcasts 2 months ahead of time</p>
             </div>
           </div>
         </div>
