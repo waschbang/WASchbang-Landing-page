@@ -1,26 +1,26 @@
-import AnnouncementBar from "@/components/AnnouncementBar";
+import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import BenefitsSection from "@/components/BenefitsSection";
-import WhyWhatsAppSection from "@/components/WhyWhatsAppSection";
 import SolutionsSection from "@/components/SolutionsSection";
+import IntegrationsSection from "@/components/IntegrationsSection";
 import PricingSection from "@/components/PricingSection";
+import CaseStudiesSection from "@/components/CaseStudiesSection";
+import ClienteleSection from "@/components/ClienteleSection";
 import FAQSection from "@/components/FAQSection";
-import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <AnnouncementBar />
+      <TopBar />
       <Navbar />
       <HeroSection />
-      <BenefitsSection />
-      <WhyWhatsAppSection />
       <SolutionsSection />
+      <ClienteleSection />
       <PricingSection />
+      <CaseStudiesSection />
+      <IntegrationsSection />
       <FAQSection />
-      <FinalCTASection />
       <Footer />
     </div>
   );

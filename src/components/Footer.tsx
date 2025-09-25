@@ -1,89 +1,79 @@
-import { Button } from "@/components/ui/button";
+import walogo from "@/assets/walogo.png";
 
 const Footer = () => {
-  const footerSections = [
-    {
-      title: "Product",
-      links: ["WhatsApp Business API", "AI Chatbots", "Broadcast Campaigns", "Live Chat", "Analytics"]
-    },
-    {
-      title: "Features",
-      links: ["Forms & Payments", "CTWA Ads", "Multi-Agent Support", "Template Messages", "Automation"]
-    },
-    {
-      title: "Industries",
-      links: ["E-commerce", "Healthcare", "Education", "Real Estate", "Travel & Tourism"]
-    },
-    {
-      title: "Resources",
-      links: ["Documentation", "API Reference", "Case Studies", "Blog", "Webinars"]
-    },
-    {
-      title: "Company",
-      links: ["About Us", "Careers", "Contact", "Partners", "Press Kit"]
-    }
-  ];
+  const features = ["Forms & Payments", "CTWA Ads", "Multi-Agent Support", "Template Messages", "Automation"];
+  const industries = ["E-commerce", "Healthcare", "Education", "Real Estate", "Travel & Tourism"];
+  const company = ["About Us", "Careers", "Contact", "Partners", "Press Kit"];
+  const legal = ["About", "Products", "Privacy", "Terms", "Help"];
 
   return (
-    <footer className="bg-neutral-900 text-white py-16">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="max-w-6xl mx-auto">
-          {/* Top Section */}
-          <div className="flex flex-wrap gap-12 mb-12">
-            {/* Company Info */}
-            <div className="w-full lg:w-1/3 min-w-[260px]">
-              <div className="flex items-center gap-2 mb-6">
-                <div className="w-8 h-8 bg-whatsapp rounded-lg flex items-center justify-center">
-                  <span className="font-bold text-sm">W</span>
-                </div>
-                <span className="text-xl font-bold">WASchbang</span>
-              </div>
-              <p className="text-neutral-400 mb-6 leading-relaxed">
-                Official WhatsApp Business API provider helping businesses achieve higher engagement and conversion rates through intelligent messaging solutions.
+    <footer id="footer" className="bg-white text-neutral-900 border-t border-neutral-200">
+      <div className="container mx-auto px-6 lg:px-12 py-10">
+        <div className="pb-8">
+          <div className="grid lg:grid-cols-4 gap-8 items-start">
+            <div className="rounded-2xl bg-neutral-900 text-white p-6 flex flex-col gap-4">
+            
+
+              <p className="text-neutral-300 leading-relaxed">
+                Official WhatsApp Business API provider helping businesses achieve higher engagement and
+                conversion rates through intelligent messaging solutions.
               </p>
-              <div className="flex gap-4">
-                <Button size="sm" className="bg-whatsapp hover:bg-whatsapp-dark">
-                  Start for FREE
-                </Button>
-                <Button variant="outline" size="sm" className="border-neutral-600 text-neutral-300 hover:bg-neutral-800">
+              <div className="flex gap-3 flex-nowrap">
+                <a href="#footer" className="inline-flex items-center justify-center h-10 px-4 rounded-full bg-whatsapp text-white font-medium premium-transition hover:bg-whatsapp-dark">
+                  Contact
+                </a>
+                <a href="#case-studies" className="inline-flex items-center justify-center h-10 px-4 rounded-full bg-white/10 text-neutral-300 border border-white/20 premium-transition hover:bg-white/15">
                   Book Demo
-                </Button>
+                </a>
               </div>
             </div>
 
-            {/* Footer Links */}
-            {footerSections
-              .filter((section) => section.title !== "Product" && section.title !== "Resources")
-              .map((section, index) => (
-                <div key={index} className="w-1/2 sm:w-1/3 lg:w-auto min-w-[180px]">
-                  <h3 className="font-semibold text-white mb-4">{section.title}</h3>
-                  <ul className="space-y-3">
-                    {section.links.map((link, linkIndex) => (
-                      <li key={linkIndex}>
-                        <a 
-                          href="#" 
-                          className="text-neutral-400 hover:text-white premium-transition text-sm"
-                        >
-                          {link}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+            {/* Right link lists (anchored to right) */}
+            <div className="lg:col-span-3">
+              <div className="w-full flex justify-end">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div>
+                    <div className="font-medium text-neutral-800 mb-3">Features</div>
+                    <ul className="space-y-2 text-neutral-600">
+                      {features.map((item) => (
+                        <li key={item}><a href="#" className="hover:text-neutral-900 premium-transition">{item}</a></li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <div className="font-medium text-neutral-800 mb-3">Industries</div>
+                    <ul className="space-y-2 text-neutral-600">
+                      {industries.map((item) => (
+                        <li key={item}><a href="#" className="hover:text-neutral-900 premium-transition">{item}</a></li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <div className="font-medium text-neutral-800 mb-3">Company</div>
+                    <ul className="space-y-2 text-neutral-600">
+                      {company.map((item) => (
+                        <li key={item}><a href="#" className="hover:text-neutral-900 premium-transition">{item}</a></li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Wordmark row with only top border and baseline alignment */}
+        <div className="pt-8 border-t border-neutral-200 flex flex-col sm:flex-row items-end justify-between gap-4 text-sm">
+          <div className="flex items-end gap-4 select-none">
+            <img src={walogo} alt="Schbang logo" className="h-[10vw] md:h-[96px] w-auto" />
+            <div className="text-[15vw] md:text-[120px] leading-[0.9] font-extrabold tracking-tight whitespace-nowrap">Schbang</div>
           </div>
 
-          {/* Bottom Section */}
-          <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="text-neutral-400 text-sm mb-4 md:mb-0">
-              &copy; 2025 WASchbang. All rights reserved.
-            </div>
-            <div className="flex gap-6 text-sm">
-              <a href="#" className="text-neutral-400 hover:text-white premium-transition">Privacy Policy</a>
-              <a href="#" className="text-neutral-400 hover:text-white premium-transition">Terms of Service</a>
-              <a href="#" className="text-neutral-400 hover:text-white premium-transition">Cookie Policy</a>
-            </div>
-          </div>
+          <nav className="flex flex-wrap items-end gap-x-6 gap-y-2 text-neutral-600">
+            {legal.map((l) => (
+              <a key={l} href="#" className="hover:text-neutral-900 premium-transition">{l}</a>
+            ))}
+          </nav>
         </div>
       </div>
     </footer>

@@ -4,80 +4,41 @@ const PricingSection = () => {
   const plans = [
     {
       name: "Starter",
-      price: "49",
-      period: "month",
-      description: "Perfect for small businesses starting with WhatsApp marketing",
-      features: [
-        "Up to 1,000 messages/month",
-        "Basic chatbot automation", 
-        "WhatsApp Business API setup",
-        "Standard templates",
-        "Email support",
-        "Basic analytics"
-      ],
+      price: "₹4,000",
+      period: "mo",
+      description: "Entry campaigns, up to 1,000 contacts, basic automation, monthly reporting",
+      features: [],
       popular: false,
-      cta: "Get Started"
+      cta: "Book Consultation"
     },
     {
       name: "Growth",
-      price: "149",
-      period: "month", 
-      description: "Ideal for growing businesses scaling their WhatsApp presence",
-      features: [
-        "Up to 10,000 messages/month",
-        "Advanced AI chatbots",
-        "Multi-agent live chat",
-        "Custom templates",
-        "Facebook/Instagram integration", 
-        "Priority support",
-        "Advanced analytics",
-        "Lead generation tools"
-      ],
+      price: "₹12,000",
+      period: "mo",
+      description: "Multiple campaigns, up to 10,000 contacts, advanced flows, integration support",
+      features: [],
       popular: true,
-      cta: "Most Popular"
+      cta: "Get Started"
     },
     {
       name: "Enterprise",
       price: "Custom",
-      period: "month",
-      description: "For large businesses with advanced WhatsApp marketing needs", 
-      features: [
-        "Unlimited messages",
-        "Custom AI solutions",
-        "Dedicated account manager",
-        "White-label options",
-        "API integrations",
-        "24/7 phone support",
-        "Custom analytics dashboard",
-        "Priority onboarding"
-      ],
+      period: "",
+      description: "Unlimited reach, bespoke journeys, full creative, strategic consultancy",
+      features: [],
       popular: false,
-      cta: "Contact Sales"
+      cta: "Talk to Us"
     }
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="pricing" className="py-16 section-gradient">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Simple, Transparent 
-            <span className="text-whatsapp"> Pricing</span>
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pricing</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            No hidden fees, no setup costs, no long-term contracts. 
-            Choose the plan that fits your business needs.
+            All packages include onboarding, your brand voice, compliance, and full campaign management. No learning curve. Only results.
           </p>
-          
-          {/* Pricing Toggle */}
-          <div className="bg-white rounded-full p-1 inline-flex whatsapp-shadow">
-            <button className="bg-whatsapp text-white px-6 py-2 rounded-full font-semibold">
-              Monthly
-            </button>
-            <button className="text-gray-600 px-6 py-2 rounded-full font-semibold">
-              Yearly (Save 20%)
-            </button>
-          </div>
         </div>
 
         {/* Pricing Cards */}
@@ -107,72 +68,38 @@ const PricingSection = () => {
                     <span className="text-4xl font-bold text-gray-900">Custom</span>
                   ) : (
                     <>
-                      <span className="text-4xl font-bold text-gray-900">${plan.price}</span>
-                      <span className="text-gray-600">/{plan.period}</span>
+                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                      {plan.period && <span className="text-gray-600">/{plan.period}</span>}
                     </>
                   )}
                 </div>
               </div>
 
-              <ul className="space-y-4 mb-8">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center">
-                    <span className="text-whatsapp mr-3">✓</span>
-                    <span className="text-gray-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+              {plan.description && (
+                <p className="text-gray-700 mb-8 text-sm leading-relaxed">{plan.description}</p>
+              )}
 
-              <Button 
-                className={`w-full py-3 rounded-full font-semibold ${
-                  plan.popular
-                    ? 'cta-gradient text-white cta-shadow'
-                    : 'border-2 border-whatsapp text-whatsapp hover:bg-whatsapp hover:text-white'
-                } smooth-transition`}
-                variant={plan.popular ? "default" : "outline"}
+              <a 
+                href={`https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27m%20interested%20in%20the%20${encodeURIComponent(plan.name)}%20plan`}
+                target="_blank" 
+                rel="noopener noreferrer"
               >
-                {plan.cta}
-              </Button>
+                <Button 
+                  className={`w-full py-3 rounded-full font-semibold ${
+                    plan.popular
+                      ? 'cta-gradient text-white cta-shadow'
+                      : 'border-2 border-whatsapp text-whatsapp hover:bg-whatsapp hover:text-white'
+                  } smooth-transition`}
+                  variant={plan.popular ? "default" : "outline"}
+                >
+                  {plan.cta}
+                </Button>
+              </a>
             </div>
           ))}
         </div>
 
-        {/* Additional Info */}
-        <div className="bg-white rounded-3xl p-8 whatsapp-shadow max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            What's Included in All Plans
-          </h3>
-          <div className="grid md:grid-cols-2 gap-6 text-left">
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <span className="text-whatsapp mr-3">✓</span>
-                <span>No setup or onboarding fees</span>
-              </div>
-              <div className="flex items-center">
-                <span className="text-whatsapp mr-3">✓</span>
-                <span>WhatsApp Business API access</span>
-              </div>
-              <div className="flex items-center">
-                <span className="text-whatsapp mr-3">✓</span>
-                <span>Compliance management included</span>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <span className="text-whatsapp mr-3">✓</span>
-                <span>Free migration from other platforms</span>
-              </div>
-              <div className="flex items-center">
-                <span className="text-whatsapp mr-3">✓</span>
-                <span>Training and onboarding support</span>
-              </div>
-              <div className="flex items-center">
-                <span className="text-whatsapp mr-3">✓</span>
-                <span>Cancel anytime, no long-term contracts</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* No extras below to keep it clean as requested */}
       </div>
     </section>
   );
