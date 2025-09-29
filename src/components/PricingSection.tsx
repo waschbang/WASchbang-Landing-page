@@ -6,7 +6,7 @@ const PricingSection = () => {
       name: "Starter",
       price: "₹4,000",
       period: "mo",
-      description: "Entry campaigns, up to 1,000 contacts, basic automation, monthly reporting",
+      description: "Up to 1,000 contacts, entry-level automation, monthly insights",
       features: [],
       popular: false,
       cta: "Book Consultation"
@@ -15,7 +15,7 @@ const PricingSection = () => {
       name: "Growth",
       price: "₹12,000",
       period: "mo",
-      description: "Multiple campaigns, up to 10,000 contacts, advanced flows, integration support",
+      description: "Multiple campaigns, advanced automations, integration support",
       features: [],
       popular: true,
       cta: "Get Started"
@@ -24,7 +24,7 @@ const PricingSection = () => {
       name: "Enterprise",
       price: "Custom",
       period: "",
-      description: "Unlimited reach, bespoke journeys, full creative, strategic consultancy",
+      description: "Unlimited reach with fully bespoke strategies and support",
       features: [],
       popular: false,
       cta: "Talk to Us"
@@ -35,9 +35,9 @@ const PricingSection = () => {
     <section id="pricing" className="py-16 section-gradient">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pricing</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Packages Designed for Growth</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            All packages include onboarding, your brand voice, compliance, and full campaign management. No learning curve. Only results.
+            All packages include onboarding, brand-aligned content, compliance assurance, and expert campaign management. Simple pricing. No surprises.
           </p>
         </div>
 

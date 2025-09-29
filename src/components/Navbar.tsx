@@ -4,11 +4,13 @@ import walogo from "@/assets/walogo.png";
 
 const Navbar = () => {
   const navItems = [
-    { name: "Features", href: "#features" },
+    { name: "Why WhatsApp", href: "#why-whatsapp" },
+    { name: "Solutions", href: "#features" },
     { name: "Case Studies", href: "#case-studies" },
     { name: "Clients", href: "#clientele" },
     { name: "Integrations", href: "#integrations" },
     { name: "Pricing", href: "#pricing" },
+    { name: "Process", href: "#process" },
     { name: "FAQs", href: "#faq" },
   ];
 
@@ -68,11 +70,9 @@ const Navbar = () => {
                   <div className="h-px bg-neutral-200 my-6" />
 
                   <div className="flex flex-col gap-3">
-                    <a href="#footer">
-                      <Button 
-                        className="bg-whatsapp hover:bg-whatsapp-dark text-white font-medium rounded-lg px-6 h-11"
-                      >
-                        Contact
+                    <a href="#get-started">
+                      <Button className="bg-whatsapp hover:bg-whatsapp-dark text-white font-medium rounded-lg px-6 h-11">
+                        Get Started
                       </Button>
                     </a>
                   </div>
@@ -83,9 +83,9 @@ const Navbar = () => {
 
           {/* Right Side */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="#footer">
+            <a href="#get-started">
               <Button className="bg-whatsapp hover:bg-whatsapp-dark text-white font-medium rounded-lg px-6 h-10">
-                Contact
+                Get Started
               </Button>
             </a>
           </div>

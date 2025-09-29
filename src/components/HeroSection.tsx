@@ -7,28 +7,37 @@ const HeroSection = () => {
         <div className="max-w-5xl mx-auto text-center space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 mx-auto bg-white premium-shadow rounded-full text-sm font-medium text-neutral-700">
             <span className="w-2 h-2 bg-whatsapp rounded-full" />
-            We Turn Conversations Into Results — by Schbang
+            We Drive Impactful Conversations — by Schbang
           </div>
 
           <h1 data-reveal className="reveal is-visible text-3xl md:text-5xl premium-heading leading-tight text-neutral-900">
-            Unlock <span className="text-whatsapp font-semibold">5X Engagement</span> & Up To 98% Open Rates with Expert WhatsApp Campaigns
+            Unlock <span className="text-whatsapp font-semibold">5X Engagement</span> with WhatsApp Campaigns That Deliver Real Business Growth
           </h1>
 
           <p data-reveal className="reveal is-visible text-lg md:text-xl premium-text max-w-3xl mx-auto leading-relaxed text-neutral-800">
-            We design, automate, and run WhatsApp marketing that delivers leads, loyalty, and real business growth—powered by Schbang’s creative and strategic excellence.
+            Schbang crafts strategic, automated WhatsApp marketing designed to generate leads, build loyalty, and scale your brand’s success.
           </p>
 
           <div data-reveal className="reveal is-visible flex flex-col sm:flex-row gap-3 justify-center">
             <a href="https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27d%20like%20to%20talk%20to%20an%20expert" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-whatsapp hover:bg-whatsapp-dark text-white premium-button h-14 px-8 rounded-2xl premium-shadow text-lg font-medium">
-                Talk to an Expert
+                Book a Complimentary Strategy Session
               </Button>
             </a>
             <a href="https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27d%20like%20to%20book%20a%20demo" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg" className="premium-button h-14 px-8 rounded-2xl border-2 border-neutral-300 text-neutral-700 hover:border-whatsapp hover:text-whatsapp bg-white premium-shadow text-lg font-medium">
-                Book a Demo
+                Try Our WhatsApp Demo Bot
               </Button>
             </a>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-3 max-w-3xl mx-auto text-sm text-neutral-600">
+            <div className="bg-white/70 rounded-xl px-4 py-3 border border-neutral-200">
+              Discover how personalized WhatsApp campaigns transform your customer engagement.
+            </div>
+            <div className="bg-white/70 rounded-xl px-4 py-3 border border-neutral-200">
+              Experience firsthand the power of conversational automation for your brand.
+            </div>
           </div>
         </div>
       </div>

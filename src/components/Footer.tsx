@@ -12,15 +12,13 @@ const Footer = () => {
         <div className="pb-8">
           <div className="grid lg:grid-cols-4 gap-8 items-start">
             <div className="rounded-2xl bg-neutral-900 text-white p-6 flex flex-col gap-4">
-            
-
+              <h3 className="text-xl font-semibold">Schbang — Engineering conversations that drive business impact.</h3>
               <p className="text-neutral-300 leading-relaxed">
-                Official WhatsApp Business API provider helping businesses achieve higher engagement and
-                conversion rates through intelligent messaging solutions.
+                Official WhatsApp Business Partner | Secure, Compliant, and Customer-Focused
               </p>
               <div className="flex gap-3 flex-nowrap">
                 <a href="#footer" className="inline-flex items-center justify-center h-10 px-4 rounded-full bg-whatsapp text-white font-medium premium-transition hover:bg-whatsapp-dark">
-                  Contact
+                  Contact Us
                 </a>
                 <a href="#case-studies" className="inline-flex items-center justify-center h-10 px-4 rounded-full bg-white/10 text-neutral-300 border border-white/20 premium-transition hover:bg-white/15">
                   Book Demo

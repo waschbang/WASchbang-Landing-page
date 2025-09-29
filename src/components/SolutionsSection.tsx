@@ -26,13 +26,13 @@ const SolutionsSection = () => {
           <div className="text-center mb-12 lg:mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-whatsapp/10 rounded-full text-sm font-medium text-whatsapp mb-6">
               <span className="w-2 h-2 bg-whatsapp rounded-full"></span>
-              Features
+              Our WhatsApp Marketing Solutions
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl premium-heading mb-6 max-w-4xl mx-auto leading-tight">
-              The WhatsApp Toolkit Built For Performance
+              Messages, Flows, and Tools That Drive Action
             </h2>
             <p className="text-lg md:text-xl premium-text max-w-3xl mx-auto leading-relaxed">
-              Forms, Payments, CTWA Ads, Live Chat, and Analytics—designed to work together without a learning curve.
+              End-to-end campaign management, intelligent automation, precision targeting, high-converting messages, and clear reporting.
             </p>
           </div>
 

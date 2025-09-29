@@ -6,9 +6,7 @@ const TopBar = () => {
   if (!visible) return null;
 
   return (
-    <div className=" p-8">
-      
-    </div>
+   <></>
   );
 };
 

@@ -7,10 +7,10 @@ import {
 
 const FAQSection = () => {
   const faqs = [
-    { question: "How fast can we start?", answer: "Most campaigns are live within a week." },
-    { question: "Do you create the content?", answer: "Absolutely—every message reflects your brand." },
-    { question: "Can you integrate with my CRM or site?", answer: "Yes! We handle all the technical work." },
-    { question: "Is my customer data safe?", answer: "100%. We build security and compliance into every step." },
+    { question: "How quickly can we launch?", answer: "Most campaigns go live within one week." },
+    { question: "Do you create campaign content?", answer: "Yes, all messaging is crafted to fit your brand’s voice perfectly." },
+    { question: "Can you integrate with my CRM or website?", answer: "Absolutely, we handle all technical integrations." },
+    { question: "Is customer data secure?", answer: "We prioritize robust security and compliance at every stage." },
   ];
 
   return (
