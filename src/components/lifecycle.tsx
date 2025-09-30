@@ -21,14 +21,14 @@ const lifecycleStages: LifecycleStage[] = [
   {
     id: 2,
     name: "CONSIDERATION",
-    position: { x: 50, y: 10 },
+    position: { x: 40, y: 15 },
     items: ["Revisit wishlist", "Ask about product"],
     delay: 0.2
   },
   {
     id: 3,
     name: "AWARENESS",
-    position: { x: 95, y: 30 },
+    position: { x: 75, y: 30 },
     items: ["Review loyalty offers", "Compare products"],
     delay: 0.4
   },
@@ -49,7 +49,7 @@ const lifecycleStages: LifecycleStage[] = [
   {
     id: 6,
     name: "RE-ENGAGEMENT",
-    position: { x: -10, y:60 },
+    position: { x: -5, y:60 },
     items: ["Automated follow-ups recover 30% lost revenue opportunities", "Personalized messaging drives higher conversion rates"],
     delay: 1.0
   }
