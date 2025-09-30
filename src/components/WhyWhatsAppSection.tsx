@@ -7,12 +7,6 @@ const WhyWhatsAppSection = () => {
     { title: "Always-on connection", detail: "One ping, instant response – on their time, their terms" },
   ];
 
-  const extras = [
-    "WhatsApp boasts over 2.7B active users globally in 2025, with businesses witnessing 5X higher engagement vs. traditional channels.",
-    "Personalized WhatsApp campaigns can drive up to 3X the ROI for customer engagement and conversions.",
-    "Leading brands use WhatsApp Business API for automated customer journeys, boosting sales and satisfaction.",
-  ];
-
   return (
     <section id="why-whatsapp" className="py-16 section-gradient">
       <div className="container mx-auto px-6 lg:px-12">
@@ -31,12 +25,6 @@ const WhyWhatsAppSection = () => {
                   <div className="text-sm text-neutral-700">{b.detail}</div>
                 </div>
               </div>
-            ))}
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-4 text-sm">
-            {extras.map((e, i) => (
-              <div key={i} className="rounded-xl bg-white/70 border border-neutral-200 p-4 text-neutral-700">{e}</div>
             ))}
           </div>
         </div>

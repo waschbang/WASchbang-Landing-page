@@ -4,18 +4,18 @@ import walogo from "@/assets/walogo.png";
 
 const Navbar = () => {
   const navItems = [
-    { name: "Why WhatsApp", href: "#why-whatsapp" },
-    { name: "Solutions", href: "#features" },
+    // { name: "Why WhatsApp", href: "#why-whatsapp" },
+    // { name: "Solutions", href: "#features" },
     { name: "Case Studies", href: "#case-studies" },
     { name: "Clients", href: "#clientele" },
-    { name: "Integrations", href: "#integrations" },
+    // { name: "Integrations", href: "#integrations" },
     { name: "Pricing", href: "#pricing" },
     { name: "Process", href: "#process" },
     { name: "FAQs", href: "#faq" },
   ];
 
   return (
-    <nav className="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-5xl bg-white/80 backdrop-blur-md rounded-full shadow border border-neutral-200 transition-all duration-300">
+    <nav className="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[50%] max-w-5xl bg-white/80 backdrop-blur-md rounded-full shadow border border-neutral-200 transition-all duration-300">
       <div className="px-4">
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
@@ -72,7 +72,7 @@ const Navbar = () => {
                   <div className="flex flex-col gap-3">
                     <a href="#get-started">
                       <Button className="bg-whatsapp hover:bg-whatsapp-dark text-white font-medium rounded-lg px-6 h-11">
-                        Get Started
+                        Try Demo Bot
                       </Button>
                     </a>
                   </div>
@@ -84,8 +84,8 @@ const Navbar = () => {
           {/* Right Side */}
           <div className="hidden lg:flex items-center gap-3">
             <a href="#get-started">
-              <Button className="bg-whatsapp hover:bg-whatsapp-dark text-white font-medium rounded-lg px-6 h-10">
-                Get Started
+              <Button className="bg-whatsapp hover:bg-whatsapp-dark text-white font-medium rounded-[100px] px-6 h-10">
+                Try Demo Bot
               </Button>
             </a>
           </div>

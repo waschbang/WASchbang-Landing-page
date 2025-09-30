@@ -3,31 +3,59 @@ import { Button } from "@/components/ui/button";
 const PricingSection = () => {
   const plans = [
     {
-      name: "Starter",
-      price: "₹4,000",
-      period: "mo",
-      description: "Up to 1,000 contacts, entry-level automation, monthly insights",
-      features: [],
+      name: "Foundation",
+      price: "2L–2.5L fixed costs + 50K retainer ",
+      period: "",
+      description: "Baseline setup for brands getting started with WhatsApp performance.",
+      breakdown: [
+        "Fixed: ₹2,00,000 – ₹2,50,000",
+        "Retainer: ₹50,000 (if applicable)",
+      ],
+      features: [
+        // space for future bullets if needed
+      ],
       popular: false,
       cta: "Book Consultation"
     },
     {
       name: "Growth",
-      price: "₹12,000",
-      period: "mo",
-      description: "Multiple campaigns, advanced automations, integration support",
+      price: "Fixed costs + 50K retainer",
+      period: "",
+      description: "Multi-campaign execution with advanced journeys and continuous optimization.",
+      breakdown: [
+        "Fixed: ₹XX",
+        "Retainer: ₹50,000",
+      ],
       features: [],
       popular: true,
       cta: "Get Started"
     },
     {
-      name: "Enterprise",
-      price: "Custom",
+      name: "Scale",
+      price: "Fixed costs + 50K retainer + 5L ad spend",
       period: "",
-      description: "Unlimited reach with fully bespoke strategies and support",
+      description: "Aggressive scaling with high-frequency campaigns and paid amplification.",
+      breakdown: [
+        "Fixed: ₹XX",
+        "Retainer: ₹50,000",
+        "Ad Spend: ₹5,00,000",
+      ],
       features: [],
       popular: false,
       cta: "Talk to Us"
+    },
+    {
+      name: "Custom",
+      price: "Custom",
+      period: "",
+      description: "Just need a one-off, high‑impact campaign? We’ll craft, launch, and measure a bespoke WhatsApp experience aligned to your goal.",
+      breakdown: [
+        "Campaign-only engagement",
+        "Outcome-led pricing",
+      ],
+      features: [],
+      popular: false,
+      cta: "Plan a Campaign"
     }
   ];
 
@@ -42,11 +70,11 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
           {plans.map((plan, index) => (
             <div 
               key={index}
-              className={`relative bg-white rounded-3xl p-8 ${
+              className={`relative bg-white rounded-3xl p-8 flex flex-col ${
                 plan.popular 
                   ? 'border-2 border-whatsapp cta-shadow scale-105' 
                   : 'whatsapp-shadow'
@@ -60,10 +88,10 @@ const PricingSection = () => {
                 </div>
               )}
               
-              <div className="text-center mb-8">
+              <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                 <p className="text-gray-600 mb-4">{plan.description}</p>
-                <div className="mb-4">
+                <div className="mb-3">
                   {plan.price === "Custom" ? (
                     <span className="text-4xl font-bold text-gray-900">Custom</span>
                   ) : (
@@ -75,26 +103,36 @@ const PricingSection = () => {
                 </div>
               </div>
 
-              {plan.description && (
-                <p className="text-gray-700 mb-8 text-sm leading-relaxed">{plan.description}</p>
+              {/* Cost breakdown chips */}
+              {Array.isArray((plan as any).breakdown) && (
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {(plan as any).breakdown.map((line: string) => (
+                    <span key={line} className="px-3 py-1.5 rounded-full bg-neutral-50 border border-neutral-200 text-neutral-700 text-sm">
+                      {line}
+                    </span>
+                  ))}
+                </div>
               )}
 
-              <a 
-                href={`https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27m%20interested%20in%20the%20${encodeURIComponent(plan.name)}%20plan`}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <Button 
-                  className={`w-full py-3 rounded-full font-semibold ${
-                    plan.popular
-                      ? 'cta-gradient text-white cta-shadow'
-                      : 'border-2 border-whatsapp text-whatsapp hover:bg-whatsapp hover:text-white'
-                  } smooth-transition`}
-                  variant={plan.popular ? "default" : "outline"}
+              {/* CTA pinned to bottom */}
+              <div className="mt-auto">
+                <a 
+                  href={`https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27m%20interested%20in%20the%20${encodeURIComponent(plan.name)}%20plan`}
+                  target="_blank" 
+                  rel="noopener noreferrer"
                 >
-                  {plan.cta}
-                </Button>
-              </a>
+                  <Button 
+                    className={`w-full py-3 rounded-full font-semibold ${
+                      plan.popular
+                        ? 'cta-gradient text-white cta-shadow'
+                        : 'border-2 border-whatsapp text-whatsapp hover:bg-whatsapp hover:text-white'
+                    } smooth-transition`}
+                    variant={plan.popular ? "default" : "outline"}
+                  >
+                    {plan.cta}
+                  </Button>
+                </a>
+              </div>
             </div>
           ))}
         </div>

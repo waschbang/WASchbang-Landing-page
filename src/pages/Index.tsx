@@ -1,17 +1,15 @@
 import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import VideoSection from "@/components/VideoSection";
 import SolutionsSection from "@/components/SolutionsSection";
 import ClienteleSection from "@/components/ClienteleSection";
 import PricingSection from "@/components/PricingSection";
-import ProcessSection from "@/components/ProcessSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 import IntegrationsSection from "@/components/IntegrationsSection";
 import FAQSection from "@/components/FAQSection";
-import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
-import SocialProofSection from "@/components/SocialProofSection";
-import WhyWhatsAppSection from "@/components/WhyWhatsAppSection";
+import { CustomerLifecycleSection } from "@/components/lifecycle";
 
 const Index = () => {
   return (
@@ -19,16 +17,14 @@ const Index = () => {
       <TopBar />
       <Navbar />
       <HeroSection />
-      <SocialProofSection />
-      <WhyWhatsAppSection />
-      <SolutionsSection />
+      <VideoSection />
       <ClienteleSection />
-      <PricingSection />
-      <ProcessSection />
+      <SolutionsSection />
       <CaseStudiesSection />
+      <CustomerLifecycleSection />
+      <PricingSection />
       <IntegrationsSection />
       <FAQSection />
-      <FinalCTASection />
       <Footer />
     </div>
   );

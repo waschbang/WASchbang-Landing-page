@@ -20,7 +20,7 @@ const ClienteleSection = () => {
     <section id="clientele" className="py-14 section-gradient">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="text-center mb-6">
-          <h2 className="text-3xl md:text-4xl premium-heading mb-12">Clients</h2>
+          <h2 className="text-3xl md:text-4xl premium-heading mb-12">Trusted by</h2>
           {/* <p className="text-neutral-600">Clients we’ve worked with</p> */}
         </div>
 

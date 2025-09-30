@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative premium-gradient overflow-hidden">
+    <section id="hero" className="relative premium-gradient overflow-hidden pt-20">
       <div className="container mx-auto px-6 lg:px-12 min-h-[calc(100vh-104px)] md:min-h-[calc(100vh-112px)] flex items-center relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 mx-auto bg-white premium-shadow rounded-full text-sm font-medium text-neutral-700">
@@ -11,7 +11,7 @@ const HeroSection = () => {
           </div>
 
           <h1 data-reveal className="reveal is-visible text-3xl md:text-5xl premium-heading leading-tight text-neutral-900">
-            Unlock <span className="text-whatsapp font-semibold">5X Engagement</span> with WhatsApp Campaigns That Deliver Real Business Growth
+            Drive <span className="text-whatsapp font-semibold">3–5X Revenue</span> with Smarter WhatsApp Campaigns
           </h1>
 
           <p data-reveal className="reveal is-visible text-lg md:text-xl premium-text max-w-3xl mx-auto leading-relaxed text-neutral-800">
@@ -21,7 +21,7 @@ const HeroSection = () => {
           <div data-reveal className="reveal is-visible flex flex-col sm:flex-row gap-3 justify-center">
             <a href="https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27d%20like%20to%20talk%20to%20an%20expert" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-whatsapp hover:bg-whatsapp-dark text-white premium-button h-14 px-8 rounded-2xl premium-shadow text-lg font-medium">
-                Book a Complimentary Strategy Session
+                Book a Session
               </Button>
             </a>
             <a href="https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27d%20like%20to%20book%20a%20demo" target="_blank" rel="noopener noreferrer">
@@ -29,15 +29,6 @@ const HeroSection = () => {
                 Try Our WhatsApp Demo Bot
               </Button>
             </a>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-3 max-w-3xl mx-auto text-sm text-neutral-600">
-            <div className="bg-white/70 rounded-xl px-4 py-3 border border-neutral-200">
-              Discover how personalized WhatsApp campaigns transform your customer engagement.
-            </div>
-            <div className="bg-white/70 rounded-xl px-4 py-3 border border-neutral-200">
-              Experience firsthand the power of conversational automation for your brand.
-            </div>
           </div>
         </div>
       </div>
