@@ -159,16 +159,10 @@ export const CustomerLifecycleSection = () => {
                 transition={{ delay: 0.4 }}
                 className="space-y-4"
               >
-                <div className="flex items-center justify-between sm:justify-start sm:space-x-8 gap-6">
-                  <div className="text-center">
-                    <div className="text-base sm:text-xl font-bold">Each</div>
-                    <div className="text-base sm:text-xl font-bold">touchpoint</div>
-                  </div>
+                <div className="flex items-center justify-start gap-3 sm:gap-4 flex-wrap">
+                  <div className="text-base sm:text-xl font-bold">Each touchpoint</div>
                   <div className="text-xl sm:text-2xl font-bold">=</div>
-                  <div className="text-center">
-                    <div className="text-base sm:text-xl font-bold">Revenue</div>
-                    <div className="text-base sm:text-xl font-bold">opportunity</div>
-                  </div>
+                  <div className="text-base sm:text-xl font-bold">Revenue opportunity</div>
                 </div>
                 
                 <motion.p

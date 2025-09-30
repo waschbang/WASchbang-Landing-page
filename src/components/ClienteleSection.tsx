@@ -17,7 +17,7 @@ const ClienteleSection = () => {
   ];
 
   return (
-    <section id="clientele" className="py-14 section-gradient">
+    <section id="clientele" className="py-14 section-gradient overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="text-center mb-6">
           <h2 className="text-3xl md:text-4xl premium-heading mb-12">Trusted by</h2>

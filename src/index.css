@@ -5,6 +5,9 @@
 /* WhatsApp Marketing Landing Page Design System */
 
 @layer base {
+  /* Load Sora from Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+
   :root {
     /* Beige primary background */
     --background: 40 40% 96%;
@@ -147,7 +150,22 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
+    font-family: 'Sora', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  }
+
+  /* Uniform heading style */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-neutral-900;
+    font-family: 'Sora', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  }
+
+  /* Mobile vertical rhythm and anchor offset */
+  @media (max-width: 640px) {
+    /* Add comfortable space inside sections on small screens */
+    section { padding-top: 1.25rem; padding-bottom: 1.25rem; scroll-margin-top: 80px; }
+    /* Add space between consecutive sections */
+    section + section { margin-top: 0.75rem; }
   }
 }
 

@@ -149,11 +149,11 @@ const SolutionsSection = () => {
   };
 
   return (
-    <section id="features" className="section-gradient">
-      {/* Make the whole section taller so we can scroll through states */}
-      <div ref={sectionRef} className="min-h-[700vh]">
-        {/* Sticky viewport */}
-        <div className="sticky top-0 h-screen flex items-center">
+    <section id="features" className="section-gradient relative z-10 mt-6 sm:mt-8">
+      {/* Make the whole section taller so we can scroll through states (md+) */}
+      <div ref={sectionRef} className="md:min-h-[350vh]">
+        {/* Sticky viewport on md+, normal flow on mobile */}
+        <div className="md:sticky md:top-0 md:h-screen flex items-center py-6">
           <div className="container mx-auto px-6 lg:px-12 pt-8 md:pt-0">
             {/* Header */}
             <div className="text-center mb-8">
@@ -161,7 +161,7 @@ const SolutionsSection = () => {
                 <span className="w-2 h-2 bg-whatsapp rounded-full" />
                 Explore WhatsApp in Action
               </div> */}
-              <h2 className="text-3xl md:text-4xl lg:text-5xl premium-heading mt-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl premium-heading mt-6">
                 Explore WhatsApp in Action
               </h2>
               <p className="text-neutral-600 max-w-3xl mx-auto mt-3">Explore our interactive demos and see how strategic WhatsApp campaigns can transform customer engagement. Click a card to dive in.</p>
