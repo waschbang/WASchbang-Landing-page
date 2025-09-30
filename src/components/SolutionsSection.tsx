@@ -154,7 +154,7 @@ const SolutionsSection = () => {
       <div ref={sectionRef} className="min-h-[700vh]">
         {/* Sticky viewport */}
         <div className="sticky top-0 h-screen flex items-center">
-          <div className="container mx-auto px-6 lg:px-12">
+          <div className="container mx-auto px-6 lg:px-12 pt-8 md:pt-0">
             {/* Header */}
             <div className="text-center mb-8">
               {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-whatsapp/10 rounded-full text-sm font-medium text-whatsapp">

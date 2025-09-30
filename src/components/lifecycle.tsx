@@ -100,9 +100,42 @@ export const CustomerLifecycleSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="min-h-[240vh] sm:min-h-[280vh] lg:min-h-[300vh] bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900">
-      <div className="sticky top-0 h-screen flex items-center justify-center">
-        <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+    <section ref={sectionRef} className="bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900">
+      {/* Mobile: straight timeline */}
+      <div className="md:hidden container mx-auto px-6 py-12">
+        <h2 className="text-2xl font-bold text-emerald-200 mb-6">Drive value across the customer lifecycle</h2>
+        <div className="relative pl-6">
+          <span className="absolute left-2 top-0 bottom-0 w-0.5 bg-emerald-400/50" />
+          {lifecycleStages.map((stage, idx) => (
+            <motion.div
+              key={stage.id}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, margin: "-20% 0px -10% 0px" }}
+              transition={{ duration: 0.5, delay: 0.05 * idx }}
+              className="relative mb-6 pr-6"
+            >
+              <span className="absolute -left-0.5 top-2 w-2 h-2 rounded-full bg-emerald-400" />
+              <div className="bg-white/95 rounded-xl shadow-md p-4 border border-emerald-200/30">
+                <div className="text-xs font-bold text-emerald-700 mb-2">{stage.name}</div>
+                <ul className="space-y-2">
+                  {stage.items.map((it, i) => (
+                    <li key={i} className="flex items-start gap-2 text-emerald-900 text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2" />
+                      <span>{it}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop/Tablet: infinity loop */}
+      <div className="hidden md:block min-h-[240vh] sm:min-h-[280vh] lg:min-h-[300vh]">
+        <div className="sticky top-0 h-screen flex items-center justify-center">
+          <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <motion.div 
             className="space-y-8 text-white"
@@ -170,11 +203,11 @@ export const CustomerLifecycleSection = () => {
                 </linearGradient>
               </defs>
               <motion.path
-                d="M 200 150 C 200 70 360 70 360 150 C 360 230 200 230 200 150 C 200 70 40 70 40 150 C 40 230 200 230 200 150"
+                d="M 80 150 C 80 80 160 80 200 150 C 240 220 320 220 320 150 C 320 80 240 80 200 150 C 160 220 80 220 80 150"
                 fill="none"
                 stroke="url(#pathGradient)"
                 strokeWidth="3"
-                strokeDasharray="10,5"
+                strokeLinecap="round"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: scrollProgress }}
                 transition={{ duration: 0.5 }}
@@ -222,15 +255,15 @@ export const CustomerLifecycleSection = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: stage.delay + 0.4 }}
                     >
-                      <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-xl p-3 sm:p-4 max-w-[180px] sm:max-w-[200px]">
-                        <ul className="space-y-1.5 sm:space-y-2">
+                      <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-xl p-3 sm:p-3.5 max-w-[160px] sm:max-w-[180px]">
+                        <ul className="space-y-1.5 sm:space-y-1.5">
                           {stage.items.map((item, index) => (
                             <motion.li
                               key={index}
                               initial={{ opacity: 0, x: -10 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: stage.delay + 0.6 + index * 0.1 }}
-                              className="flex items-start space-x-2 text-xs sm:text-sm"
+                              className="flex items-start space-x-2 text-[11px] sm:text-xs"
                             >
                               <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 flex-shrink-0" />
                               <span className="text-gray-700">{item}</span>
@@ -258,6 +291,7 @@ export const CustomerLifecycleSection = () => {
             </motion.div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

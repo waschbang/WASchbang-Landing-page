@@ -105,7 +105,7 @@ const CaseStudiesSection = () => {
   }, [active, paused]);
 
   return (
-    <section id="case-studies" className="py-16 section-gradient">
+    <section id="case-studies" className="pt-12 sm:pt-16 pb-16 section-gradient">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl premium-heading mb-3">Work We’re Proud Of</h2>
