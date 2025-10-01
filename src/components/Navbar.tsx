@@ -4,18 +4,16 @@ import walogo from "@/assets/walogo.png";
 
 const Navbar = () => {
   const navItems = [
-    // { name: "Why WhatsApp", href: "#why-whatsapp" },
-    // { name: "Solutions", href: "#features" },
-    { name: "Case Studies", href: "#case-studies" },
-    { name: "Clients", href: "#clientele" },
-    // { name: "Integrations", href: "#integrations" },
+    { name: "Overview", href: "#overview" },
+    { name: "Lifecycle", href: "#lifecycle" },
     { name: "Pricing", href: "#pricing" },
-    // { name: "Process", href: "#process" },
+    { name: "Offerings", href: "#offerings" },
+    { name: "Case Studies", href: "#case-studies" },
     { name: "FAQs", href: "#faq" },
   ];
 
   return (
-    <nav className="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[90%] lg:w-[50%] max-w-5xl bg-white/80 backdrop-blur-md rounded-full shadow border border-neutral-200 transition-all duration-300">
+    <nav className="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[90%] lg:w-[55%] max-w-6xl bg-white/70 backdrop-blur-md rounded-full shadow border border-neutral-200 transition-all duration-300">
       <div className="px-4">
         <div className="flex items-center justify-between h-14">
           {/* Logo */}

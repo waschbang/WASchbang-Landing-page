@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
 import skillhouseLogo from "@/assets/skillhouse.png";
 import imagineLogo from "@/assets/Imagine logo.png";
 import pdpLogo from "@/assets/pdp.png";
@@ -118,21 +119,26 @@ const CaseStudiesSection = () => {
           onMouseLeave={() => setPaused(false)}
         >
           {/* Left: Tabs */}
-          <div className="rounded-2xl border border-neutral-200 bg-white overflow-visible h-full self-stretch grid grid-rows-3">
+          <div
+            className="rounded-2xl border border-neutral-200 bg-white overflow-hidden h-full self-stretch grid min-h-[520px] md:min-h-[560px]"
+            style={{ gridTemplateRows: `repeat(${cases.length}, minmax(0, 1fr))` }}
+          >
             {cases.map((c, idx) => {
               const isActive = idx === active;
               return (
                 <button
                   key={idx}
                   onClick={() => setActive(idx)}
-                  className={`relative w-full h-full text-left px-6 py-6 flex items-center border-b last:border-b-0 transition-colors ${
+                  className={`relative w-full h-full text-left pl-6 pr-6 py-6 flex items-center border-b border-neutral-200 last:border-b-0 transition-colors ${
                     isActive
                       ? "bg-gradient-to-r from-whatsapp/10 to-transparent"
                       : "hover:bg-neutral-50"
-                  } ${isActive ? "border-l-4 border-whatsapp" : "border-l-4 border-transparent"} ${
+                  } ${
                     idx === 0 ? "rounded-t-2xl" : idx === cases.length - 1 ? "rounded-b-2xl" : ""
                   } focus:outline-none focus-visible:ring-2 focus-visible:ring-whatsapp/40`}
                 >
+                  {/* Fixed accent bar to avoid width shift */}
+                  <span className={`absolute left-0 top-0 h-full w-1.5 rounded-l-2xl ${isActive ? "bg-whatsapp" : "bg-transparent"}`} />
                   <div className={`font-semibold leading-snug line-clamp-1 w-full ${isActive ? "text-neutral-900" : "text-neutral-700"}`}>{c.title}</div>
                   {isActive && (
                     <div className="pointer-events-none absolute left-2 right-2 bottom-1 h-1">
@@ -148,7 +154,7 @@ const CaseStudiesSection = () => {
           </div>
 
           {/* Right: Detail panel */}
-          <div className="relative rounded-3xl border border-neutral-200 bg-white p-6 lg:p-8 overflow-hidden flex flex-col justify-center min-h-[360px] md:min-h-[380px] lg:min-h-[400px]">
+          <div className="relative rounded-3xl border border-neutral-200 bg-white p-6 lg:p-8 overflow-hidden flex flex-col justify-center min-h-[520px] md:min-h-[560px]">
             {/* Decorative blobs removed as requested */}
 
             <div className="flex items-center gap-3 mb-2">
@@ -181,6 +187,15 @@ const CaseStudiesSection = () => {
               {cases[active].tags.map((t) => (
                 <span key={t} className="px-3 py-1.5 rounded-full border border-neutral-200 text-neutral-700 text-sm">{t}</span>
               ))}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-6">
+              <a href="#get-started">
+                <Button className="rounded-full h-11 px-6 bg-whatsapp text-white hover:bg-whatsapp-dark">
+                  See how we did it
+                </Button>
+              </a>
             </div>
           </div>
         </div>

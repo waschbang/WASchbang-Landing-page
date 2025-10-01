@@ -100,7 +100,7 @@ export const CustomerLifecycleSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900">
+    <section id="lifecycle" ref={sectionRef} className="bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900">
       {/* Mobile: straight timeline */}
       <div className="md:hidden container mx-auto px-6 py-12">
         <h2 className="text-2xl font-bold text-emerald-200 mb-6">Drive value across the customer lifecycle</h2>

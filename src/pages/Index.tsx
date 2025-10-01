@@ -1,15 +1,13 @@
 import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import VideoSection from "@/components/VideoSection";
-import SolutionsSection from "@/components/SolutionsSection";
-import ClienteleSection from "@/components/ClienteleSection";
-import PricingSection from "@/components/PricingSection";
-import CaseStudiesSection from "@/components/CaseStudiesSection";
-import IntegrationsSection from "@/components/IntegrationsSection";
-import FAQSection from "@/components/FAQSection";
-import Footer from "@/components/Footer";
+import BentoOverviewSection from "@/components/BentoOverviewSection";
 import { CustomerLifecycleSection } from "@/components/lifecycle";
+import PricingPlans from "@/components/PricingPlans";
+import OfferingsSection from "@/components/OfferingsSection";
+import CaseStudies from "@/components/CaseStudies";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -17,14 +15,12 @@ const Index = () => {
       <TopBar />
       <Navbar />
       <HeroSection />
-      <VideoSection />
-      <ClienteleSection />
-      <SolutionsSection />
-      <CaseStudiesSection />
+      <BentoOverviewSection />
       <CustomerLifecycleSection />
-      <PricingSection />
-      <IntegrationsSection />
-      <FAQSection />
+      <PricingPlans />
+      <OfferingsSection />
+      <CaseStudies />
+      <FAQ />
       <Footer />
     </div>
   );

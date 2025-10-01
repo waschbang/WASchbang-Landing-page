@@ -76,12 +76,20 @@ const Footer = () => {
             <img src={walogo} alt="Schbang logo" className="h-[8vw] md:h-[64px] w-auto" />
             <div className="text-[8vw] md:text-[78px] leading-[0.9] font-extrabold tracking-tight whitespace-nowrap">Schbang</div>
           </div>
-          {/* Show legal links here only on mobile; desktop already shows in Resources */}
+          {/* Mobile: show legal links inline. Desktop: show compact Resources block on right */}
           <nav className="flex lg:hidden flex-wrap items-center justify-center gap-x-4 gap-y-2 text-neutral-600 text-xs sm:text-sm">
             {legal.map((l) => (
               <a key={l} href="#" className="hover:text-neutral-900 premium-transition">{l}</a>
             ))}
           </nav>
+          <div className="hidden lg:block text-right">
+            <div className="text-sm font-semibold text-neutral-800 mb-1">Resources</div>
+            <div className="flex items-center gap-4 text-neutral-600">
+              {legal.map((l) => (
+                <a key={l} href="#" className="hover:text-neutral-900 premium-transition text-sm">{l}</a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </footer>
