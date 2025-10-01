@@ -16,18 +16,18 @@ const HeroSection = () => {
   )}`;
 
   return (
-    <section id="hero" className="relative premium-gradient overflow-hidden pt-24 pb-10">
-      <div className="container mx-auto px-6 lg:px-12 min-h-[calc(100vh-120px)] md:min-h-[calc(100vh-136px)] flex items-center relative z-10">
+    <section id="hero" className="relative premium-gradient overflow-x-hidden overflow-y-hidden pt-24 pb-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12 min-h-[calc(100vh-120px)] md:min-h-[calc(100vh-136px)] flex items-center relative z-10">
         <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
           {/* Left: Copy + CTAs */}
           <div className="max-w-2xl mx-auto text-center lg:text-left space-y-6">
 
 
-            <h1 data-reveal className="reveal is-visible text-3xl md:text-5xl premium-heading leading-tight text-neutral-900">
+            <h1 data-reveal className="reveal is-visible text-2xl sm:text-3xl md:text-5xl premium-heading leading-tight text-neutral-900 max-w-[26rem] sm:max-w-3xl mx-auto lg:mx-0">
               Drive <span className=" font-semibold">3–5X Revenue</span> with Smarter <span className="text-whatsapp font-semibold">WhatsApp Campaigns</span>
             </h1>
 
-            <p data-reveal className="reveal is-visible text-lg md:text-xl premium-text max-w-3xl mx-auto lg:mx-0 leading-relaxed text-neutral-800">
+            <p data-reveal className="reveal is-visible text-base sm:text-lg md:text-xl premium-text max-w-[28rem] sm:max-w-3xl mx-auto lg:mx-0 leading-relaxed text-neutral-800">
               Schbang crafts strategic, automated WhatsApp marketing designed to generate leads, build loyalty, and scale your brand’s success.
             </p>
 
@@ -43,17 +43,17 @@ const HeroSection = () => {
             </div> */}
 
             {/* CTAs */}
-            <div data-reveal className="reveal is-visible flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <div data-reveal className="reveal is-visible flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full max-w-sm mx-auto lg:mx-0">
               <a href="https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27d%20like%20to%20talk%20to%20an%20expert" target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
-                  className="relative h-14 px-8 rounded-2xl text-white text-lg font-semibold bg-gradient-to-b from-whatsapp to-emerald-500 shadow-[0_10px_24px_rgba(16,185,129,0.35)] hover:shadow-[0_18px_40px_rgba(16,185,129,0.5)] ring-1 ring-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-[1.01] after:pointer-events-none after:absolute after:inset-0 after:rounded-2xl after:bg-emerald-300/30 after:blur-xl after:opacity-0 hover:after:opacity-100"
+                  className="w-full sm:w-auto relative h-14 px-8 rounded-2xl text-white text-lg font-semibold bg-gradient-to-b from-whatsapp to-emerald-500 ring-1 ring-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-[1.01] shadow-md sm:shadow-[0_10px_24px_rgba(16,185,129,0.35)] sm:hover:shadow-[0_18px_40px_rgba(16,185,129,0.5)]"
                 >
                   Book a Session
                 </Button>
               </a>
               <a href="https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27d%20like%20to%20book%20a%20demo" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="h-14 px-8 rounded-2xl text-white text-lg font-medium bg-whatsapp/85 backdrop-blur-md border border-white/30 ring-1 ring-white/20 shadow-[0_10px_28px_rgba(16,185,129,0.35)] hover:bg-whatsapp/95 hover:shadow-[0_16px_44px_rgba(16,185,129,0.45)]">
+                <Button size="lg" className="w-full sm:w-auto h-14 px-8 rounded-2xl text-white text-lg font-medium bg-whatsapp/90 backdrop-blur-md border border-white/30 ring-1 ring-white/20 shadow-md sm:shadow-[0_10px_28px_rgba(16,185,129,0.35)] hover:bg-whatsapp">
                   Try Our WhatsApp Demo Bot
                 </Button>
               </a>
@@ -61,23 +61,23 @@ const HeroSection = () => {
             {/* <div className="text-sm text-neutral-600">Takes less than 30 sec • No commitment demo</div> */}
 
             {/* Tiny email form */}
-            <div id="get-started" className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto lg:mx-0">
+            <div id="get-started" className="flex flex-col sm:flex-row gap-3 w-full max-w-sm mx-auto lg:mx-0">
               <Input
                 type="email"
                 placeholder="Enter your work email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="h-12 rounded-xl bg-white premium-shadow"
+                className="h-12 rounded-xl bg-white premium-shadow w-full"
               />
               <a href={waHref} target="_blank" rel="noopener noreferrer" className="shrink-0">
-                <Button className="h-12 px-6 rounded-xl bg-neutral-900 text-white hover:bg-neutral-800">
+                <Button className="w-full sm:w-auto h-12 px-6 rounded-xl bg-neutral-900 text-white hover:bg-neutral-800">
                   Get Started
                 </Button>
               </a>
             </div>
 
             {/* Social proof - marquee */}
-            <div className="pt-4">
+            <div className="pt-4 overflow-hidden">
               <div className="text-neutral-700 text-sm mb-2">Trusted by 200+ brands</div>
               <Marquee speed={40} gradient={false} pauseOnHover={true} autoFill={true} className="py-1">
                 {[pdp, imagine, skillhouse, schbang, level].map((src, idx) => (
@@ -87,15 +87,15 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right: CTWA image */}
-          <div className="relative mx-auto w-full max-w-lg rounded-[2rem] border border-neutral-200 bg-white overflow-hidden premium-shadow">
+          {/* Right: CTWA image (hidden on mobile for cleaner layout) */}
+          <div className="hidden lg:block relative mx-auto w-full max-w-lg rounded-[2rem] border border-neutral-200 bg-white overflow-hidden premium-shadow">
             <img src={ctwa} alt="Click-to-WhatsApp experience" className="w-full h-auto object-cover" />
           </div>
         </div>
       </div>
 
       {/* Floating WhatsApp button: green circle with white glyph (icon-only) */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-6 right-4 sm:right-6 z-50">
         <a
           href="https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27d%20like%20to%20chat"
           target="_blank"
