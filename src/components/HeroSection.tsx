@@ -34,7 +34,7 @@ const HeroSection = () => {
             {/* Mini flow explainer */}
             {/* <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 text-sm text-neutral-700">
               <span className="px-3 py-1 rounded-full bg-white/80 border">Business</span>
-              <span className="opacity-70">→</span>
+              <span className="opacity-70">→</span>aa
               <span className="px-3 py-1 rounded-full bg-whatsapp text-white">WhatsApp Campaigns</span>
               <span className="opacity-70">→</span>
               <span className="px-3 py-1 rounded-full bg-white/80 border">User Engagement</span>
