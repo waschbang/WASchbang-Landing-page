@@ -14,20 +14,20 @@ const HeroSection = () => {
   const waHref = `https://wa.me/919999999999?text=${encodeURIComponent(
     `Hi Schbang, I'm interested in WhatsApp campaigns. My work email: ${email || "[email]"}.`
   )}`;
-
   return (
-    <section id="hero" className="relative premium-gradient overflow-x-hidden overflow-y-hidden pt-24 pb-10">
+    <section id="hero" className="relative premium-gradient overflow-x-hidden overflow-y-hidden pt-14 pb-6 sm:pt-24 sm:pb-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 min-h-[calc(100vh-120px)] md:min-h-[calc(100vh-136px)] flex items-center relative z-10">
-        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center justify-items-center lg:justify-items-stretch">
           {/* Left: Copy + CTAs */}
-          <div className="max-w-2xl mx-auto text-center lg:text-left space-y-6">
-
-
-            <h1 data-reveal className="reveal is-visible text-2xl sm:text-3xl md:text-5xl premium-heading leading-tight text-neutral-900 max-w-[26rem] sm:max-w-3xl mx-auto lg:mx-0">
-              Drive <span className=" font-semibold">3–5X Revenue</span> with Smarter <span className="text-whatsapp font-semibold">WhatsApp Campaigns</span>
+          <div className="max-w-full sm:max-w-2xl mx-auto text-center lg:text-left space-y-6 px-4 sm:px-0">
+            <h1
+              data-reveal
+              className="reveal is-visible text-2xl sm:text-3xl md:text-5xl premium-heading leading-tight text-neutral-900 max-w-[90%] sm:max-w-3xl mx-auto lg:mx-0"
+            >
+              Drive <span className="font-semibold">3–5X Revenue</span> with Smarter <span className="text-whatsapp font-semibold">WhatsApp Campaigns</span>
             </h1>
 
-            <p data-reveal className="reveal is-visible text-base sm:text-lg md:text-xl premium-text max-w-[28rem] sm:max-w-3xl mx-auto lg:mx-0 leading-relaxed text-neutral-800">
+            <p data-reveal className="reveal is-visible text-base sm:text-lg md:text-xl premium-text max-w-[90%] sm:max-w-3xl mx-auto lg:mx-0 leading-relaxed text-neutral-800">
               Schbang crafts strategic, automated WhatsApp marketing designed to generate leads, build loyalty, and scale your brand’s success.
             </p>
 
@@ -43,7 +43,7 @@ const HeroSection = () => {
             </div> */}
 
             {/* CTAs */}
-            <div data-reveal className="reveal is-visible flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full max-w-sm mx-auto lg:mx-0">
+            <div data-reveal className="reveal is-visible flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full sm:max-w-sm mx-auto lg:mx-0 px-4 sm:px-0">
               <a href="https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27d%20like%20to%20talk%20to%20an%20expert" target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
@@ -61,7 +61,7 @@ const HeroSection = () => {
             {/* <div className="text-sm text-neutral-600">Takes less than 30 sec • No commitment demo</div> */}
 
             {/* Tiny email form */}
-            <div id="get-started" className="flex flex-col sm:flex-row gap-3 w-full max-w-sm mx-auto lg:mx-0">
+            <div id="get-started" className="flex flex-col sm:flex-row gap-3 w-full sm:max-w-sm mx-auto lg:mx-0 px-4 sm:px-0">
               <Input
                 type="email"
                 placeholder="Enter your work email"
@@ -77,11 +77,11 @@ const HeroSection = () => {
             </div>
 
             {/* Social proof - marquee */}
-            <div className="pt-4 overflow-hidden">
-              <div className="text-neutral-700 text-sm mb-2">Trusted by 200+ brands</div>
+            <div className="pt-4 overflow-hidden px-4 sm:px-0">
+              <div className="text-neutral-700 text-sm mb-2 text-center sm:text-left">Trusted by 200+ brands</div>
               <Marquee speed={40} gradient={false} pauseOnHover={true} autoFill={true} className="py-1">
                 {[pdp, imagine, skillhouse, schbang, level].map((src, idx) => (
-                  <img key={idx} src={src} alt="client logo" className="h-8 sm:h-10 w-auto object-contain mx-8 mix-blend-multiply" />
+                  <img key={idx} src={src} alt="client logo" className="h-8 sm:h-10 w-auto object-contain mx-4 sm:mx-8 mix-blend-multiply" />
                 ))}
               </Marquee>
             </div>
