@@ -4,7 +4,7 @@ import walogo from "@/assets/walogo.png";
 
 const Navbar = () => {
   const navItems = [
-    { name: "Overview", href: "#overview" },
+    // { name: "Overview", href: "#overview" },
     { name: "Lifecycle", href: "#lifecycle" },
     { name: "Pricing", href: "#pricing" },
     { name: "Offerings", href: "#offerings" },
@@ -13,7 +13,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[90%] lg:w-[55%] max-w-6xl bg-white/70 backdrop-blur-md rounded-full shadow border border-neutral-200 transition-all duration-300">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] lg:w-[55%] max-w-6xl bg-white/70 backdrop-blur-md rounded-full shadow border border-neutral-200 transition-all duration-300">
       <div className="px-4">
         <div className="flex items-center justify-between h-14">
           {/* Logo */}

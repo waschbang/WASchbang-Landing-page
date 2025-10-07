@@ -17,9 +17,9 @@ const Index = () => {
       <HeroSection />
       <BentoOverviewSection />
       <CustomerLifecycleSection />
-      <PricingPlans />
       <OfferingsSection />
       <CaseStudies />
+      <PricingPlans />
       <FAQ />
       <Footer />
     </div>

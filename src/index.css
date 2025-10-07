@@ -5,8 +5,7 @@
 /* WhatsApp Marketing Landing Page Design System */
 
 @layer base {
-  /* Load Sora from Google Fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+  /* Sora font is linked in index.html for consistent local/live loading */
 
   :root {
     /* Beige primary background */

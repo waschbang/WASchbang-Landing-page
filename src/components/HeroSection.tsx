@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import Marquee from "react-fast-marquee";
-import { useState } from "react";
 import ctwa from "@/assets/solutionsimg/CTWA.jpg";
 import pdp from "@/assets/pdp.png";
 import imagine from "@/assets/Imagine logo.png";
@@ -10,12 +8,8 @@ import schbang from "@/assets/Schbang Logo_Main.png";
 import level from "@/assets/levellogo.png";
 
 const HeroSection = () => {
-  const [email, setEmail] = useState("");
-  const waHref = `https://wa.me/919999999999?text=${encodeURIComponent(
-    `Hi Schbang, I'm interested in WhatsApp campaigns. My work email: ${email || "[email]"}.`
-  )}`;
   return (
-    <section id="hero" className="relative premium-gradient overflow-x-hidden overflow-y-hidden pt-14 pb-6 sm:pt-24 sm:pb-10">
+    <section id="hero" className="relative premium-gradient overflow-x-hidden overflow-y-hidden pt-14 pb-6 sm:pt-36 sm:pb-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 min-h-[calc(100vh-120px)] md:min-h-[calc(100vh-136px)] flex items-center relative z-10">
         <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center justify-items-center lg:justify-items-stretch">
           {/* Left: Copy + CTAs */}
@@ -24,7 +18,7 @@ const HeroSection = () => {
               data-reveal
               className="reveal is-visible text-2xl sm:text-3xl md:text-5xl premium-heading leading-tight text-neutral-900 max-w-[90%] sm:max-w-3xl mx-auto lg:mx-0"
             >
-              Drive <span className="font-semibold">3–5X Revenue</span> with Smarter <span className="text-whatsapp font-semibold">WhatsApp Campaigns</span>
+              Drive <span className="font-semibold ">3–5X Revenue</span> with Smarter <span className="text-whatsapp font-semibold">WhatsApp Campaigns</span>
             </h1>
 
             <p data-reveal className="reveal is-visible text-base sm:text-lg md:text-xl premium-text max-w-[90%] sm:max-w-3xl mx-auto lg:mx-0 leading-relaxed text-neutral-800">
@@ -60,28 +54,19 @@ const HeroSection = () => {
             </div>
             {/* <div className="text-sm text-neutral-600">Takes less than 30 sec • No commitment demo</div> */}
 
-            {/* Tiny email form */}
-            <div id="get-started" className="flex flex-col sm:flex-row gap-3 w-full sm:max-w-sm mx-auto lg:mx-0 px-4 sm:px-0">
-              <Input
-                type="email"
-                placeholder="Enter your work email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="h-12 rounded-xl bg-white premium-shadow w-full"
-              />
-              <a href={waHref} target="_blank" rel="noopener noreferrer" className="shrink-0">
-                <Button className="w-full sm:w-auto h-12 px-6 rounded-xl bg-neutral-900 text-white hover:bg-neutral-800">
-                  Get Started
-                </Button>
-              </a>
-            </div>
-
             {/* Social proof - marquee */}
             <div className="pt-4 overflow-hidden px-4 sm:px-0">
               <div className="text-neutral-700 text-sm mb-2 text-center sm:text-left">Trusted by 200+ brands</div>
               <Marquee speed={40} gradient={false} pauseOnHover={true} autoFill={true} className="py-1">
                 {[pdp, imagine, skillhouse, schbang, level].map((src, idx) => (
-                  <img key={idx} src={src} alt="client logo" className="h-8 sm:h-10 w-auto object-contain mx-4 sm:mx-8 mix-blend-multiply" />
+                  <img 
+                    key={idx} 
+                    src={src} 
+                    alt="client logo" 
+                    className={`w-auto object-contain mx-4 sm:mx-8 mix-blend-multiply ${
+                      idx === 0 || idx === 2 ? 'h-24 sm:h-28' : 'h-8 sm:h-10'
+                    }`}
+                  />
                 ))}
               </Marquee>
             </div>
