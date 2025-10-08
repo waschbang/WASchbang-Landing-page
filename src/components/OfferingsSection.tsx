@@ -97,11 +97,11 @@ const OfferingsSection = () => {
   }, [api]);
 
   return (
-    <section id="offerings" className="py-16 section-gradient relative">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl premium-heading">Explore WhatsApp in Action</h2>
-          <p className="text-neutral-600 max-w-3xl mx-auto mt-3">Auto-rotating overview of our core experiences. Skip the scroll—skim what's possible at a glance.</p>
+    <section id="offerings" className="py-12 sm:py-16 section-gradient relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="premium-heading" style={{ fontSize: 'clamp(1.75rem, 3vw + 0.5rem, 3rem)' }}>Explore WhatsApp in Action</h2>
+          <p className="text-neutral-600 max-w-3xl mx-auto mt-2 sm:mt-3" style={{ fontSize: 'clamp(0.9rem, 1.2vw + 0.3rem, 1rem)' }}>Auto-rotating overview of our core experiences. Skip the scroll—skim what's possible at a glance.</p>
         </div>
 
         {/* 1 / 2 / 3 cards per view */}
@@ -109,20 +109,20 @@ const OfferingsSection = () => {
           <Carousel setApi={setApi} opts={{ align: "start", loop: true }}>
             <CarouselContent>
               {OFFERINGS.map((o, i) => (
-                <CarouselItem key={o.id} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={o.id} className="pl-3 sm:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <div className="h-full">
-                    <div className="h-full rounded-3xl border border-neutral-200 bg-white premium-shadow-lg flex flex-col overflow-hidden">
-                      <div className="relative h-40 sm:h-44 md:h-48 lg:h-52">
+                    <div className="h-full rounded-2xl sm:rounded-3xl border border-neutral-200 bg-white premium-shadow-lg flex flex-col overflow-hidden">
+                      <div className="relative" style={{ height: 'clamp(10rem, 15vw + 5rem, 13rem)' }}>
                         <img src={o.image} alt={o.category} className="absolute inset-0 w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                        <div className="absolute left-4 bottom-3 px-3 py-1.5 rounded-full bg-white/90 text-xs font-semibold text-neutral-800 border">{o.category}</div>
+                        <div className="absolute left-3 sm:left-4 bottom-2 sm:bottom-3 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-white/90 font-semibold text-neutral-800 border" style={{ fontSize: 'clamp(0.7rem, 1vw + 0.2rem, 0.75rem)' }}>{o.category}</div>
                       </div>
-                      <div className="p-6 space-y-3 flex-1 flex flex-col">
-                        <h3 className="text-xl md:text-2xl font-semibold text-neutral-900">{o.headline}</h3>
-                        <p className="text-neutral-700 text-sm md:text-base leading-relaxed flex-1">{o.body}</p>
-                        <div className="pt-2">
+                      <div className="p-4 sm:p-6 space-y-2 sm:space-y-3 flex-1 flex flex-col">
+                        <h3 className="font-semibold text-neutral-900" style={{ fontSize: 'clamp(1.1rem, 1.5vw + 0.3rem, 1.5rem)' }}>{o.headline}</h3>
+                        <p className="text-neutral-700 leading-relaxed flex-1" style={{ fontSize: 'clamp(0.85rem, 1vw + 0.2rem, 1rem)' }}>{o.body}</p>
+                        <div className="pt-1 sm:pt-2">
                           <a href="#get-started">
-                            <Button className="rounded-full h-10 px-5 bg-whatsapp text-white hover:bg-whatsapp-dark">{o.cta}</Button>
+                            <Button className="rounded-full px-4 sm:px-5 bg-whatsapp text-white hover:bg-whatsapp-dark" style={{ height: 'clamp(2.25rem, 3vw, 2.5rem)', fontSize: 'clamp(0.85rem, 1vw + 0.2rem, 0.95rem)' }}>{o.cta}</Button>
                           </a>
                         </div>
                       </div>

@@ -151,6 +151,19 @@
   body {
     @apply bg-background text-foreground overflow-x-hidden;
     font-family: 'Sora', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    /* Prevent layout breaks at different zoom levels */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Ensure proper scaling at all zoom levels */
+  * {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  img, video, iframe {
+    height: auto;
   }
 
   /* Uniform heading style */

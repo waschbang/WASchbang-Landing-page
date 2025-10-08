@@ -9,26 +9,27 @@ import level from "@/assets/levellogo.png";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative premium-gradient overflow-x-hidden overflow-y-hidden pt-14 pb-6 sm:pt-36 sm:pb-10">
+    <section id="hero" className="relative premium-gradient overflow-x-hidden overflow-y-hidden pt-14 pb-6 sm:pt-32 sm:pb-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 min-h-[calc(100vh-120px)] md:min-h-[calc(100vh-136px)] flex items-center relative z-10">
-        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center justify-items-center lg:justify-items-stretch">
+        <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-6 lg:gap-10 items-center justify-items-center lg:justify-items-stretch">
           {/* Left: Copy + CTAs */}
-          <div className="max-w-full sm:max-w-2xl mx-auto text-center lg:text-left space-y-6 px-4 sm:px-0">
+          <div className="max-w-full sm:max-w-2xl mx-auto text-center lg:text-left space-y-4 sm:space-y-6 px-4 sm:px-0">
             <h1
               data-reveal
-              className="reveal is-visible text-2xl sm:text-3xl md:text-5xl premium-heading leading-tight text-neutral-900 max-w-[90%] sm:max-w-3xl mx-auto lg:mx-0"
+              className="reveal is-visible premium-heading leading-tight text-neutral-900 max-w-[90%] sm:max-w-3xl mx-auto lg:mx-0"
+              style={{ fontSize: 'clamp(1.5rem, 4vw + 0.5rem, 3rem)' }}
             >
-              Drive <span className="font-semibold ">3–5X Revenue</span> with Smarter <span className="text-whatsapp font-semibold">WhatsApp Campaigns</span>
+              Drive <span className="font-semibold">3–5X Revenue</span> with Smarter <span className="text-whatsapp font-semibold">WhatsApp Campaigns</span>
             </h1>
 
-            <p data-reveal className="reveal is-visible text-base sm:text-lg md:text-xl premium-text max-w-[90%] sm:max-w-3xl mx-auto lg:mx-0 leading-relaxed text-neutral-800">
-              Schbang crafts strategic, automated WhatsApp marketing designed to generate leads, build loyalty, and scale your brand’s success.
+            <p data-reveal className="reveal is-visible premium-text max-w-[90%] sm:max-w-3xl mx-auto lg:mx-0 leading-relaxed text-neutral-800" style={{ fontSize: 'clamp(0.95rem, 1.5vw + 0.5rem, 1.25rem)' }}>
+              Schbang crafts strategic, automated WhatsApp marketing designed to generate leads, build loyalty, and scale your brand's success.
             </p>
 
             {/* Mini flow explainer */}
             {/* <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 text-sm text-neutral-700">
               <span className="px-3 py-1 rounded-full bg-white/80 border">Business</span>
-              <span className="opacity-70">→</span>aa
+              <span className="opacity-70">→</span>
               <span className="px-3 py-1 rounded-full bg-whatsapp text-white">WhatsApp Campaigns</span>
               <span className="opacity-70">→</span>
               <span className="px-3 py-1 rounded-full bg-white/80 border">User Engagement</span>
@@ -38,16 +39,17 @@ const HeroSection = () => {
 
             {/* CTAs */}
             <div data-reveal className="reveal is-visible flex flex-col sm:flex-row gap-3 justify-center lg:justify-start w-full sm:max-w-sm mx-auto lg:mx-0 px-4 sm:px-0">
-              <a href="https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27d%20like%20to%20talk%20to%20an%20expert" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27d%20like%20to%20talk%20to%20an%20expert" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto relative h-14 px-8 rounded-2xl text-white text-lg font-semibold bg-gradient-to-b from-whatsapp to-emerald-500 ring-1 ring-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-[1.01] shadow-md sm:shadow-[0_10px_24px_rgba(16,185,129,0.35)] sm:hover:shadow-[0_18px_40px_rgba(16,185,129,0.5)]"
+                  className="w-full sm:w-auto relative h-12 sm:h-14 px-6 sm:px-8 rounded-2xl text-white font-semibold bg-gradient-to-b from-whatsapp to-emerald-500 ring-1 ring-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-[1.01] shadow-md sm:shadow-[0_10px_24px_rgba(16,185,129,0.35)] sm:hover:shadow-[0_18px_40px_rgba(16,185,129,0.5)]"
+                  style={{ fontSize: 'clamp(0.95rem, 1.2vw + 0.3rem, 1.125rem)' }}
                 >
                   Book a Session
                 </Button>
               </a>
-              <a href="https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27d%20like%20to%20book%20a%20demo" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="w-full sm:w-auto h-14 px-8 rounded-2xl text-white text-lg font-medium bg-whatsapp/90 backdrop-blur-md border border-white/30 ring-1 ring-white/20 shadow-md sm:shadow-[0_10px_28px_rgba(16,185,129,0.35)] hover:bg-whatsapp">
+              <a href="https://wa.me/919999999999?text=Hi%20Schbang%2C%20I%27d%20like%20to%20book%20a%20demo" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto h-12 sm:h-14 px-6 sm:px-8 rounded-2xl text-white font-medium bg-whatsapp/90 backdrop-blur-md border border-white/30 ring-1 ring-white/20 shadow-md sm:shadow-[0_10px_28px_rgba(16,185,129,0.35)] hover:bg-whatsapp" style={{ fontSize: 'clamp(0.95rem, 1.2vw + 0.3rem, 1.125rem)' }}>
                   Try Our WhatsApp Demo Bot
                 </Button>
               </a>
@@ -56,16 +58,15 @@ const HeroSection = () => {
 
             {/* Social proof - marquee */}
             <div className="pt-4 overflow-hidden px-4 sm:px-0">
-              <div className="text-neutral-700 text-sm mb-2 text-center sm:text-left">Trusted by 200+ brands</div>
+              <div className="text-neutral-700 mb-2 text-center sm:text-left" style={{ fontSize: 'clamp(0.875rem, 1vw + 0.3rem, 0.95rem)' }}>Trusted by 200+ brands</div>
               <Marquee speed={40} gradient={false} pauseOnHover={true} autoFill={true} className="py-1">
                 {[pdp, imagine, skillhouse, schbang, level].map((src, idx) => (
                   <img 
                     key={idx} 
                     src={src} 
                     alt="client logo" 
-                    className={`w-auto object-contain mx-4 sm:mx-8 mix-blend-multiply ${
-                      idx === 0 || idx === 2 ? 'h-24 sm:h-28' : 'h-8 sm:h-10'
-                    }`}
+                    className="w-auto object-contain mx-4 sm:mx-8 mix-blend-multiply"
+                    style={{ height: idx === 0 || idx === 2 ? 'clamp(5rem, 6vw, 6rem)' : 'clamp(2rem, 2.5vw, 2.5rem)' }}
                   />
                 ))}
               </Marquee>
