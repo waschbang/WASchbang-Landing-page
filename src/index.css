@@ -92,6 +92,13 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* On very small screens, prefer a solid color to avoid gradient tearing */
+  @media (max-width: 640px) {
+    .premium-gradient {
+      background: hsl(40 40% 96%) !important;
+    }
+  }
+
   /* Hide native scrollbars (used for horizontal subnav) */
   .hide-scrollbar {
     -ms-overflow-style: none; /* IE and Edge */
@@ -146,6 +153,7 @@
 
   html {
     scroll-behavior: smooth;
+    font-size: 16px; /* base scaling for rem-based clamps */
   }
 
   body {
@@ -159,11 +167,12 @@
   /* Ensure proper scaling at all zoom levels */
   * {
     box-sizing: border-box;
-    max-width: 100%;
   }
 
   img, video, iframe {
+    max-width: 100%;
     height: auto;
+    display: block;
   }
 
   /* Uniform heading style */
@@ -174,6 +183,7 @@
 
   /* Mobile vertical rhythm and anchor offset */
   @media (max-width: 640px) {
+    html { font-size: 18px; }
     /* Add comfortable space inside sections on small screens */
     section { padding-top: 1.25rem; padding-bottom: 1.25rem; scroll-margin-top: 80px; }
     /* Add space between consecutive sections */
@@ -196,6 +206,21 @@
   
   .premium-gradient {
     background: var(--gradient-premium);
+    /* Fallback color to match gradient base to avoid edge seams */
+    background-color: hsl(40 40% 96%);
+    position: relative; /* enable pseudo-element below */
+    isolation: isolate; /* keep ::before below content reliably */
+    /* Nudge GPU compositing to avoid subtle banding on some devices */
+    transform: translateZ(0);
+  }
+  /* Extend background slightly to prevent 1px tearing on some mobile GPUs */
+  .premium-gradient::before {
+    content: "";
+    position: absolute;
+    inset: -2px; /* overscan */
+    background: var(--gradient-premium);
+    z-index: -1; /* ensure it's behind all content */
+    pointer-events: none;
   }
   
   .card-gradient {
@@ -224,6 +249,15 @@
   
   .premium-transition {
     transition: var(--transition-premium);
+  }
+
+  /* Force GPU compositing to mitigate mobile tearing/banding */
+  .gpu-layer {
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   .smooth-transition {

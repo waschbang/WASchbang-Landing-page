@@ -116,9 +116,7 @@ const PricingPlans = () => {
 
               <div className="mt-auto">
                 <a
-                  href={`https://wa.me/919999999999?text=${encodeURIComponent(
-                    `Hi Schbang, I'm interested in the ${plan.name} plan. CTA: ${plan.cta}`,
-                  )}`}
+                  href="https://calendly.com/wa-schbang/new-meeting"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

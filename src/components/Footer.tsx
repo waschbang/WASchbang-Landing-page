@@ -20,7 +20,7 @@ const Footer = () => {
                 <a href="#footer" className="inline-flex items-center justify-center h-9 sm:h-10 px-3 sm:px-4 rounded-full bg-whatsapp text-white text-sm sm:text-base font-medium premium-transition hover:bg-whatsapp-dark">
                   Contact Us
                 </a>
-                <a href="#case-studies" className="inline-flex items-center justify-center h-9 sm:h-10 px-3 sm:px-4 rounded-full bg-white/10 text-neutral-300 border border-white/20 premium-transition hover:bg-white/15 text-sm sm:text-base">
+                <a href="https://calendly.com/wa-schbang/new-meeting" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center h-9 sm:h-10 px-3 sm:px-4 rounded-full bg-white/10 text-neutral-300 border border-white/20 premium-transition hover:bg-white/15 text-sm sm:text-base">
                   Book Demo
                 </a>
               </div>

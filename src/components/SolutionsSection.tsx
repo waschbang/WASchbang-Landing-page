@@ -185,7 +185,9 @@ const SolutionsSection = () => {
                 {cta && (
                   <div className="pt-2">
                     <a
-                      href="#contact"
+                      href="https://calendly.com/wa-schbang/new-meeting"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center justify-center h-11 px-5 rounded-full bg-whatsapp text-white font-medium premium-transition hover:bg-whatsapp-dark shadow-sm"
                     >
                       {cta.replace("CTA:", "").trim()}

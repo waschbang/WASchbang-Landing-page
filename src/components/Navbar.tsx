@@ -13,7 +13,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] sm:w-[90%] lg:w-[65%] xl:w-[55%] max-w-6xl bg-white/70 backdrop-blur-md rounded-full shadow border border-neutral-200 transition-all duration-300">
+    <nav className="fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[80%] sm:w-[90%] lg:w-[65%] xl:w-[55%] max-w-6xl bg-white/70 backdrop-blur-md rounded-full shadow border border-neutral-200 transition-all duration-300">
       <div className="px-3 sm:px-4">
         <div className="flex items-center justify-between" style={{ height: 'clamp(3rem, 4vw + 1rem, 3.5rem)' }}>
           {/* Logo */}
@@ -69,7 +69,7 @@ const Navbar = () => {
                   <div className="h-px bg-neutral-200 my-6" />
 
                   <div className="flex flex-col gap-3">
-                    <a href="#get-started">
+                    <a href="https://calendly.com/wa-schbang/new-meeting" target="_blank" rel="noopener noreferrer">
                       <Button className="bg-whatsapp hover:bg-whatsapp-dark text-white font-medium rounded-lg px-6 h-11">
                         Try Demo Bot
                       </Button>
@@ -82,7 +82,7 @@ const Navbar = () => {
 
           {/* Right Side */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="#get-started">
+            <a href="https://calendly.com/wa-schbang/new-meeting" target="_blank" rel="noopener noreferrer">
               <Button className="bg-whatsapp hover:bg-whatsapp-dark text-white font-medium rounded-[100px] px-4 xl:px-6" style={{ height: 'clamp(2.25rem, 3vw, 2.5rem)', fontSize: 'clamp(0.8rem, 1vw + 0.2rem, 0.875rem)' }}>
                 Try Demo Bot
               </Button>

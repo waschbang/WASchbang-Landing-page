@@ -191,13 +191,13 @@ const CaseStudiesSection = () => {
             </div>
 
             {/* CTA */}
-            <div className="mt-4 sm:mt-6">
+            {/* <div className="mt-4 sm:mt-6">
               <a href="#get-started">
                 <Button className="rounded-full px-5 sm:px-6 bg-whatsapp text-white hover:bg-whatsapp-dark" style={{ height: 'clamp(2.5rem, 3.5vw, 2.75rem)', fontSize: 'clamp(0.9rem, 1.2vw + 0.2rem, 1rem)' }}>
                   See how we did it
                 </Button>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

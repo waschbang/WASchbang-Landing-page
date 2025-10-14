@@ -97,7 +97,7 @@ const OfferingsSection = () => {
   }, [api]);
 
   return (
-    <section id="offerings" className="py-12 sm:py-16 section-gradient relative">
+    <section id="offerings" className="py-12 sm:py-16 section-gradient relative overflow-x-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12">
         <div className="text-center mb-6 sm:mb-8">
           <h2 className="premium-heading" style={{ fontSize: 'clamp(1.75rem, 3vw + 0.5rem, 3rem)' }}>Explore WhatsApp in Action</h2>
@@ -105,9 +105,9 @@ const OfferingsSection = () => {
         </div>
 
         {/* 1 / 2 / 3 cards per view */}
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <Carousel setApi={setApi} opts={{ align: "start", loop: true }}>
-            <CarouselContent>
+            <CarouselContent className="-ml-3 sm:-ml-4">
               {OFFERINGS.map((o, i) => (
                 <CarouselItem key={o.id} className="pl-3 sm:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <div className="h-full">
@@ -121,7 +121,7 @@ const OfferingsSection = () => {
                         <h3 className="font-semibold text-neutral-900" style={{ fontSize: 'clamp(1.1rem, 1.5vw + 0.3rem, 1.5rem)' }}>{o.headline}</h3>
                         <p className="text-neutral-700 leading-relaxed flex-1" style={{ fontSize: 'clamp(0.85rem, 1vw + 0.2rem, 1rem)' }}>{o.body}</p>
                         <div className="pt-1 sm:pt-2">
-                          <a href="#get-started">
+                          <a href="https://calendly.com/wa-schbang/new-meeting" target="_blank" rel="noopener noreferrer">
                             <Button className="rounded-full px-4 sm:px-5 bg-whatsapp text-white hover:bg-whatsapp-dark" style={{ height: 'clamp(2.25rem, 3vw, 2.5rem)', fontSize: 'clamp(0.85rem, 1vw + 0.2rem, 0.95rem)' }}>{o.cta}</Button>
                           </a>
                         </div>
@@ -131,8 +131,8 @@ const OfferingsSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-6 bg-white/90" />
-            <CarouselNext className="-right-6 bg-white/90" />
+            <CarouselPrevious className="hidden md:flex md:-left-6 bg-white/90 z-10 h-8 w-8" />
+            <CarouselNext className="hidden md:flex md:-right-6 bg-white/90 z-10 h-8 w-8" />
           </Carousel>
 
           {/* Dots */}
